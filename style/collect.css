@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:10rem;
+  font-size:0.3rem;
+  background-color:#EEE;
+  width:6rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top_collect
+{
+	width:6rem;
+	height:0.6rem;
+	border-bottom:0.02rem solid #2A3F00;
+	margin-bottom:0.1rem;
+}
+
+.return
+{
+	margin-left:0.15rem;
+	margin-top:0.07rem;
+}/*top_pay结束*/
+
+.content
+{
+	width:6rem;
+	/*height:1rem;*/
+	border-top:0.015rem solid #555;
+	border-bottom:0.01rem solid #007FAA;
+	margin-top:0.05rem;
+	padding-bottom:0.2rem;
+}
+
+.top
+{
+	width:5.5rem;
+	height:0.3rem;
+	margin:0.25rem 0 0.2rem 0.4rem;
+
+}
+
+.btn_accept
+{
+	height:0.5rem;
+	margin-top:0.3rem;
+}
+	
+.btn_accept li
+{
+	float:left;
+	margin-left:0.2rem;
+	margin-top:0.1rem;
+}
+
+.btn_accept p
+{
+	margin-left:0.05rem;
+	line-height:0.5rem;
+	float:left;
+	color:#E00;
+	font-size:0.2rem;
+}
+
+#accept
+{
+	width:1rem;
+	height:0.4rem;
+	margin:0 0.2rem 0 1rem;
+	background-color:#0A0;
+	color:#EEE;
+	border:none;
+	font-size:0.24rem;
+	border-radius:0.05rem;
+}
+
+#ignore
+{
+	width:1.2rem;
+	height:0.4rem;
+	margin-right:0.2rem;
+	background-color:#888;
+	color:#FFF;
+	border:none;
+	font-size:0.24rem;
+	border-radius:0.05rem;
+}/*第一条任务结束*/
+
+
+
+

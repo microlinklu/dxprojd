@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.wrap
+{
+    height:8rem;
+    font-size:0.3rem;
+    background-color:#eee;
+    width:6rem;
+    margin:0 auto;
+	position:relative;
+}/*公用部分*/
+
+/*搜索框*/
+.seek
+{   
+    width:6rem;
+    height:0.6rem;
+	background-color:#eee;
+}
+
+#seek
+{
+	width:4.5rem;
+	height:0.4rem;
+	color:#666;
+	margin:0.1rem 0rem 0.1rem 0.27rem;
+	border:none;
+	padding-left:0.1rem;
+	float:left;
+}
+
+#btn_seek
+{
+	wdith:1.2rem;
+	height:0.4rem;
+	color:#0D0;
+	float:left;
+	margin-top:0.1rem;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
+	border:none;
+	background-color:#09F;
+}/*搜索框按钮结束*/
+
+
+.button
+{
+	width:6rem;	
+	height:0.8rem;
+	margin-bottom:0.02rem;
+	border-bottom:0.015rem solid #808080;
+}
+
+#button_a
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#FC6;
+	border:none;
+}
+
+#button_b
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#DDD;
+	border:none;
+	border-left:0.01rem solid #000;
+}/*发布接受按钮*/
+
+.task
+{
+	width:6rem;
+	height:1.1rem;
+	background-color:#EEE;
+	border-top:0.015rem solid #555;
+	border-bottom:0.015rem solid #007FAA;
+	margin-bottom:0.02rem;
+}
+
+.top
+{
+	width:5.5rem;
+	height:0.3rem;
+	margin-left:0.4rem;
+	margin-top:0.15rem;
+	float:left;
+}
+
+.shoucang
+{
+	float:right;
+	margin-top:-0.3rem;
+	margin-right:0.05rem;
+}
+
+.btn_accept
+{
+	height:0.5rem;
+	margin-top:0.5rem;
+}
+	
+.btn_accept li
+{
+	float:left;
+	margin-left:0.5rem;
+	margin-top:0.1rem;
+}
+
+.btn_accept p
+{
+	line-height:0.5rem;
+	float:left;
+	color:#E00;
+}
+
+#accept
+{
+	width:0.7rem;
+	height:0.4rem;
+	margin-left:0.7rem;
+	background-color:#0A0;
+	color:#EEE;
+	border:none;
+}
+
+#ignore
+{
+	width:0.75rem;
+	height:0.4rem;
+	background-color:#888;
+	color:#FFF;
+	border:none;
+}/*任务结束*/
+
+.navBox
+{
+  font-family:"微软雅黑";
+  font-size:0.14rem;
+  position:fixed;
+  bottom:0rem;
+  border-top:0.01rem solid rgb(0,0,0);
+  width:6rem;
+}
+
+.nav li
+{  
+  float:left; 
+  width:0.2rem;
+  margin:0.05rem 0.48rem;
+}
+
+.nav li a
+{	
+  display:inline-block;	
+}
+
+.nav li a span
+{
+  margin-top:-0.02rem;
+  padding-left:0.02rem;
+  color:#111;
+}/*底部导航结束*/
+
+
+
+
+
+

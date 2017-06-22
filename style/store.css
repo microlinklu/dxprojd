@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:8rem;
+  font-size:0.2rem;
+  width:6rem;
+  margin:0 auto;
+}
+
+.top_store 
+{
+	width:6rem;
+	height:0.6rem;
+	padding-top:0.1rem;
+	font-size:0.25rem;
+	background:rgb(221,221,221);
+	/*position:fixed;*/
+}
+
+.top_store ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+}
+
+#return
+{
+	margin-top:-0.05rem;
+}
+
+.right_title
+{
+    font-size:0.3rem;
+	margin-left:0.2rem;
+	line-height:0.6rem;
+}/*top_store结束*/
+
+#lbBox
+{
+	width:6rem;
+	height:3rem;
+	overflow:hidden;	
+}/*轮播图结束*/
+                                            	
+.store
+{
+  height:0.5rem;
+  border-bottom:0.015rem solid #AAA;
+  border-top:0.015rem solid #AAA;
+  margin-top:0.1rem;
+  line-height:0.4rem;
+}		
+
+.store h3
+{
+	background:url(../images/icon/%E6%96%B0%E5%93%81%E4%B8%8A%E5%B8%82.png) no-repeat 0.1rem 0.08rem;
+	padding-left:0.65rem;
+	line-height:0.5rem;
+}/*新品上市标题结束*/
+
+#product_box
+{
+  padding-top:0.06rem;
+  height:11.5rem;
+}
+
+.store_img
+{
+  float:left;	
+  width:1.82rem;
+  height:2.6rem;
+  margin:0.02rem;
+  overflow: hidden;
+    padding-left: 0.1rem;
+}
+
+.img_a
+{
+  width:2rem;
+  height:1.8rem;
+}
+.img_a img
+{
+    width:2rem;
+    height:1.8rem;
+}
+.product_name
+{
+  width:1.9rem;
+  height:0.75rem;
+  margin-top:0.01rem;
+  font-family:"微软雅黑";
+  font-size:0.18rem;
+}
+
+#product_box ul li p
+{
+  float:left
+}/*新品上市结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

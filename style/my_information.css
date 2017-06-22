@@ -1,0 +1,340 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:13rem;
+  font-size:0.3rem;
+  background-color:rgb(221,221,221);
+  width:6rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top_pay
+{
+	width:6rem;
+	height:0.45rem;
+	/*position:fixed;*/
+}
+
+.return
+{
+	margin-left:0.15rem;
+	line-height:0.45rem;
+}/*top_pay结束*/
+
+.portrait
+{
+	width:5rem;
+	height:1rem;
+	overflow:hidden;
+	margin-top:0.5rem;
+}
+
+.img
+{
+	width:1rem;
+	height:1rem;
+	float:left;
+	margin-left:0.4rem;
+}
+
+.portrait p
+{
+	line-height:1rem;
+	margin-left:0.5rem;
+}/*更换头像结束*/
+
+.content
+{
+	width:4rem;
+	height:6rem;
+	margin-left:1.4rem;
+	margin-top:0.45rem;
+}
+
+.name
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+	
+}
+
+.name p
+{
+	float:left;
+	line-height:0.5rem;padding-top:-0.1rem;
+}
+
+.name_a
+{
+	border-bottom:0.02rem solid #2A00ff;
+	color:#2A00FF;
+}
+
+.modify_n
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}/*修改姓名结束*/
+
+.sex
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+	
+}
+
+.sex p
+{
+	float:left;
+	line-height:0.5rem;padding-top:-0.1rem;
+}
+
+.sex_a
+{
+	border-bottom:0.02rem solid #2A00ff;
+	color:#2A00FF;
+}
+
+.select_s
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}/*选择性别结束*/
+
+.age
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+}
+
+.age p
+{
+	float:left;
+	line-height:0.5rem;padding-top:-0.1rem;
+}
+
+.age_a
+{
+	border-bottom:0.02rem solid #2A00ff;
+	color:#2A00FF;
+}
+
+.select_a
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}/*选择年龄结束*/
+	
+.jobs
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+}
+
+.jobs p
+{
+	float:left;
+	line-height:0.5rem;
+	padding-top:-0.1rem;
+}
+
+.jobs_a
+{
+	color:#2A00FF;
+}
+
+.modify_j
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;	
+}/*修改职业结束*/
+	
+.education
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+	
+}
+
+.education p
+{
+	float:left;
+	line-height:0.5rem;padding-top:-0.1rem;
+}
+
+.education_a
+{
+	border-bottom:0.02rem solid #2A00ff;
+	color:#2A00FF;
+}
+
+.select_a
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}
+
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;	
+}
+
+.education p
+{
+	float:left;
+	line-height:0.5rem;
+	padding-top:-0.1rem;
+}
+
+.education_a
+{
+
+	color:#2A00FF;
+}
+
+.select_e	
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}/*学历选择结束*/
+
+.nickname
+{
+	width:4rem;
+	height:0.6rem;
+	margin-bottom:0.35rem;
+	margin-left:0.1rem;
+}
+
+.nickname p
+{
+	float:left;
+	line-height:0.5rem;
+	padding-top:-0.1rem;
+}
+
+.nickname_a
+{
+	border-bottom:0.02rem solid #2A00ff;
+	color:#2A00FF;
+}
+
+.modify_nn
+{
+	width:0.7rem;
+	height:0.5rem;
+	margin-left:0.5rem;
+	margin-top:0.02rem;
+	font-size:0.3rem;
+	border:none;
+	background:none;
+	border-bottom:0.02rem solid #2A1F00;
+}/*修改昵称结束*/
+	
+.submit
+{
+	width:6rem;
+	height:2rem;
+	margin-top:1.5rem;
+}
+
+.submit_01
+{
+	width:5rem;
+	height:0.55rem;
+	margin-left:0.5rem;
+	margin-bottom:0.5rem;
+	font-size:0.3rem;
+}/*提交按钮结束*/
+
+/*分类导航*/
+.navBox
+{
+  font-family:"微软雅黑";
+  font-size:0.14rem;
+  position:absolute;
+  bottom:0rem;
+  width:6rem;
+}
+
+.nav li
+{  
+  float:left; 
+  width:0.2rem;
+  margin:0.05rem 0.48rem;
+}
+
+.nav li a
+{	
+  display:inline-block;	
+}
+
+.nav li a span
+{
+  margin-top:-0.02rem;
+  padding-left:0.02rem;
+  color:#111;
+}/*底部导航结束*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

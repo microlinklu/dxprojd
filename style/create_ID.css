@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.3rem;
+  background-color:rgb(229,11,10);
+  width:6rem;
+  height:11rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top
+{
+	width:6rem;
+	height:0.5rem;
+	font-size:0.3rem;
+	border-bottom:0.02rem solid #CCC;
+	/*position:fixed;*/
+}
+
+.top p
+{
+	line-height:0.5rem;
+	font-size:0.33rem;
+	margin-left:2.3rem;
+}
+
+.picture
+{
+	width:1.7rem;
+	height:1.7rem;
+	margin-left:2.1rem;
+	margin-top:1rem;
+}
+
+.picture img
+{
+	width:1.7rem;
+	height:1.7rem;
+}
+
+
+.name_box
+{
+	width:4rem;
+	height:0.6rem;
+	border-bottom:0.02rem solid #FFF;
+	margin-top:1rem;
+	margin-left:1rem;
+}
+
+#name
+{
+	width:2rem;
+	height:0.5rem;
+	border:none;
+	background:none;
+	font-size:0.24rem;
+	line-height:0.6rem;
+}
+
+.phone_box
+{
+	width:4rem;
+	height:0.6rem;
+	border-bottom:0.02rem solid #FFF;
+	margin-top:0.5rem;
+	margin-left:1rem;
+}
+
+#phone
+{
+	width:1.8rem;
+	height:0.6rem;
+	border:none;
+	background:none;
+	color:#FFF;
+	font-size:0.24rem;
+	line-height:0.8rem;
+}
+
+.password_box
+{
+	width:4rem;
+	height:0.6rem;
+	border-bottom:0.02rem solid #FFF;
+	margin-top:0.5rem;
+	margin-left:1rem;
+}
+
+#password
+{
+	width:2rem;
+	height:0.5rem;
+	border:none;
+	background:none;
+	font-size:0.24rem;
+	line-height:0.6rem;
+}
+
+.btn_create
+{
+	width:4rem;
+	height:1.8rem;
+	margin:0.6rem 1rem;;
+}
+
+#create
+{
+	width:4rem;
+	height:0.8rem;
+	font-size:0.3rem;
+}
+
+#login
+{
+	width:4rem;
+	height:0.8rem;
+	border:none;
+	background:none;
+	font-size:0.3rem;
+	line-height:1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

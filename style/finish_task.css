@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+	width:6rem;
+    height:10rem;
+    font-size:0.3rem;
+    background-color:#eee;  
+    margin:0 auto;
+	position:relative;
+}/*公用部分*/
+
+.top
+{
+	width:5.8rem;
+	height:0.6rem;
+	padding-left:0.2rem;
+	padding-top:0.15rem;
+	border-bottom:0.02rem solid #FFF;
+	background-color:#DDD;
+}
+	
+.content
+{
+	font-size:0.25rem;
+	margin:0.8rem 0.3rem;
+}
+
+#title
+{
+	color:#2A1FFF;
+}
+	
+.finish_task
+{
+	font-size:0.25rem;
+    color:#2A1FFF;
+	margin-top:2rem;
+	margin-left:1.2rem;
+	padding-bottom:2rem;
+	text-decoration:underline;
+}/*内容结束*/
+

@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.3rem;
+  background-color:#F66;
+  width:6rem;
+  height:10rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top_indent
+{
+	width:6rem;
+	height:0.6rem;
+	font-size:0.3rem;
+	border-bottom:0.01rem solid rgb(238,238,238);
+	/*position:fixed;*/
+}
+
+.top_indent ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-top: 0.03rem;
+	margin-left:0.1rem;
+	line-height:0.5rem;
+}
+
+.right_title
+{
+	height:0.6rem;
+	line-height: 0.6rem;;
+	margin-left:0.2rem;
+}/*top结束*/
+
+.succeed
+{
+	width:6rem;
+	height:1.4rem;
+	border-bottom:0.02rem solid #ccc;
+	position:relative;	
+}
+
+.succeed img
+{
+	width:1.5rem;
+	height:1.12rem;
+	position:absolute;
+	left:0.14rem;
+	top:0.18rem;
+}
+
+.succeed span
+{
+	position:absolute;
+	left:1.8rem;
+	top:0.3rem;
+}
+
+#deal
+{
+	position:absolute;
+	left:1.8rem;
+	top:0.85rem;
+}
+
+#succeed
+{
+	position:absolute;
+	left:2.5rem;
+	top:0.85rem;
+}
+
+.succeed p
+{
+	position:absolute;
+	left:1rem;
+	top:0.7rem;
+}
+
+#integral
+{
+	position:absolute;
+	left:4.5rem;
+	top:0.85rem;
+}
+
+#number
+{
+	position:absolute;
+	left:4rem;
+	top:0.85rem;
+}/*交易成功结束*/
+
+.defeated
+{
+	width:6rem;
+	height:1.4rem;
+	border-bottom:0.02rem solid #ccc;
+	position:relative;	
+}
+
+.defeated img
+{
+	width:1.5rem;
+	height:1.12rem;
+	position:absolute;
+	left:0.14rem;
+	top:0.18rem;
+}
+
+.defeated span
+{
+	position:absolute;
+	left:1.8rem;
+	top:0.3rem;
+}
+
+#deal
+{
+	position:absolute;
+	left:1.8rem;
+	top:0.85rem;
+}
+
+#defeated
+{
+	position:absolute;
+	left:2.5rem;
+	top:0.85rem;
+}
+
+.defeated p
+{
+	position:absolute;
+	left:1rem;
+	top:0.7rem;
+}
+
+#integral
+{
+	position:absolute;
+	left:4.5rem;
+	top:0.85rem;
+}
+
+#number
+{
+	position:absolute;
+	left:4rem;
+	top:0.85rem;
+}/*交易失败结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

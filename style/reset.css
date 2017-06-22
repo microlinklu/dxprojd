@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input
+{
+	margin:0;padding:0;
+}
+
+img
+{
+	border:none;
+}
+
+li
+{
+	list-style:none;
+}
+
+input,select,textarea
+{
+	outline:none;
+}
+
+textarea
+{
+	resize:none;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+/*清浮动*/
+.clearfix:after,.clearfix:before
+{
+	display:block;
+	clear:both;
+	content:"";
+}
+
+.clearfix
+{
+	zoom:1;
+}
+
+
+/*底部导航开心*/
+.navBox
+{
+	width:6rem;
+	height:0.8rem;
+	font-family:"微软雅黑";
+	font-size:0.18rem;
+	margin-top:0.85rem;
+	position: fixed;
+	bottom:0;
+	padding:0.1rem 0;
+	background-color: #eee;
+}
+
+.nav li
+{
+	float:left;
+	display:inline-block;
+	width:0.4rem;
+	height:0.55rem;
+	margin-left:0.68rem;
+	margin-top:0.02rem;
+}
+
+.nav li span
+{
+	margin-top:-0.02rem;
+	color:#111;
+}/*底部导航结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

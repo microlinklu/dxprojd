@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.2rem;
+  background-color:#F66;
+  width:6rem;
+  height:10rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top_address
+{
+	width:6rem;
+	height:0.4rem;
+	font-size:0.3rem;
+	border-bottom:0.02rem solid #CCC;
+	padding:0.15rem 0;
+}
+
+.top_address ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+	line-height:0.5rem;
+}
+
+.right_title
+{
+	margin-left:0.2rem;
+	line-height:0.4rem;
+}/*top结束*/
+
+.name
+{
+	width:5rem;
+	height:0.4rem;
+	margin-top:0.3rem;
+
+}
+
+.name li
+{
+	float:left;
+    margin-left:0.2rem;
+}
+
+#phone
+{
+	text-decoration:underline;
+	color:#00F;
+}
+
+.address
+{
+	width:6rem;
+	height:3rem;
+	margin-left:0.2rem;
+	line-height:0.5rem;
+	margin-bottom:1rem;
+}
+
+.minute
+{
+	width:5.4rem;
+	height:2.5rem;
+	border:0.02rem solid rgb(255,255,255);
+	color:#AAA;
+}/*文本域结束*/
+
+.affirm
+{
+	width:6rem;
+	height:2rem;
+	margin-top:2rem;
+}
+
+#affirm
+{
+	width:5rem;
+	height:0.55rem;
+	margin-left:0.5rem;
+	margin-bottom:0.5rem;
+	font-size:0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.3rem;
+  background-color:#F66;
+  width:6rem;
+  height:10rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top_up01
+{
+	width:6rem;
+	height:0.6rem;
+	font-size:0.3rem;
+	border-bottom:0.02rem solid #CCC;
+	/*position:fixed;*/
+}
+
+.top_up01 ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+	line-height:0.4rem;
+}
+
+#return
+{
+	margin-top:0.05rem;}
+
+.right_title
+{
+	height: 0.6rem;
+	line-height:0.6rem;
+	margin-left:0.2rem;
+
+}/*top结束*/
+
+#money
+{
+	margin-left:0.5rem;
+	width:5rem;
+	height:0.4rem;
+	margin-top:0.85rem;
+}
+
+.succeed
+{
+	width:6rem;
+	height:2rem;
+	margin-top:2rem;
+}
+
+#succeed
+{
+	width:5rem;
+	height:0.55rem;
+	margin-left:0.5rem;
+	margin-bottom:0.5rem;
+	font-size:0.3rem;
+}
+
+

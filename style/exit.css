@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.3rem;
+  width:6rem;
+  height:8rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top
+{
+	width:6rem;
+	height:0.6rem;
+	line-height: 0.6rem;
+	font-size:0.3rem;
+	border-bottom:0.02rem solid #CCC;
+	background-color:rgb(187,187,187);
+	/*position:fixed;*/
+}
+
+.top ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-top:0.05rem;
+	margin-left:0.1rem;
+	line-height:0.4rem;
+}
+
+.right_title
+{
+	height:0.6rem;
+	line-height: 0.6rem;
+	margin-left:0.2rem;
+}/*top结束*/
+
+.content
+{
+	width:5rem;
+	height:0.35rem;
+	margin-top:0.7rem;
+	margin-left:0.3rem;
+}
+
+.content li
+{
+    margin-left:0.35rem;	
+	line-height:0.8rem;
+}
+
+#account
+{
+	color:#00F;
+	text-decoration:underline;
+	font-size:0.34rem;
+}
+
+#phone
+{
+	text-decoration:underline;
+	color:#00F;
+}
+
+#img
+{
+	width:1.2rem;
+	height:1.2rem;
+	margin-right:-0.5rem;
+	float:right;
+	margin-top:-0.45rem;
+	
+}
+
+#name
+{
+	width:2rem;
+	height:0.5rem;
+	font-size:0.25rem;
+}
+	
+#sex
+{
+	width:2rem;
+	height:0.5rem;
+	font-size:0.25rem;
+}
+
+#profession
+{
+	width:2rem;
+	height:0.5rem;
+	font-size:0.25rem;
+}
+
+#education
+{
+	width:2rem;
+	height:0.5rem;
+	font-size:0.25rem;
+}
+	
+.secede
+{
+	width:3rem;
+	height:1rem;
+	margin-top:6rem;
+}
+
+#secede
+{
+	width:5rem;
+	height:0.6rem;
+	margin-left:0.5rem;
+	font-size:0.3rem;
+	background:#F96;
+	color:#FFF;
+}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

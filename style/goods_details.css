@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:11rem;
+  font-size:0.2rem;
+  background-color:#FFF;
+  width:6rem;
+  margin:0 auto;
+}
+
+.top_details
+{
+	width:6rem;
+	height:0.6rem;
+	font-size:0.25rem;
+	background:rgb(0,0,0);
+	padding-top:0.1rem;
+
+}
+
+.top_details ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+	line-height:0.4rem;
+}
+
+.right_title
+{
+	margin-left:0.2rem;
+	color:#fff;
+	height:0.6rem;
+	line-height: 0.5rem;;
+}/*top_details结束*/
+
+#lbBox
+{
+	width:6rem;
+	height:3rem;
+	overflow:hidden;	
+}/*轮播图结束*/
+
+#product_box
+{
+  padding-top:0.05rem;
+  height:9.5rem;
+  font-size:0.24rem;
+}
+
+.product_name
+{
+  width:5rem;
+  height:0.75rem;
+  margin-top:0.3rem;
+  margin-left:0.3rem;
+  font-family:"微软雅黑";
+}
+
+.name
+{
+	float:left;
+	width:2.3rem;
+	height:0.4rem;
+	font-size:0.22rem;
+	line-height:0.4rem;
+}
+
+.name p
+{
+	float:left;
+}
+
+.norms
+{   
+    float:left;
+	width:2.3rem;
+	height:0.4rem;
+	font-size:0.22rem;
+	line-height:0.4rem;
+	margin-left:0.2rem;
+}
+
+.norms p
+{
+	float:left;
+}
+
+.color
+{
+	float:left;
+	width:2.3rem;
+	height:0.4rem;
+	font-size:0.22rem;
+	line-height:0.4rem;
+	margin-top:0.15rem;
+}
+
+.color p
+{
+	float:left;
+}
+
+.cost
+{
+	float:left;
+	width:2.3rem;
+	height:0.4rem;
+	font-size:0.22rem;
+	line-height:0.4rem;
+	margin-left:0.2rem;
+	margin-top:0.15rem;
+}
+
+.cost p
+{
+	float:left;
+}
+
+.img
+{
+  width:6rem;
+  height:6.2rem;
+  margin-top:0.3rem;
+
+}
+
+.img li
+{
+	width:6rem;
+	height:2.9rem;
+	padding-top:0.1rem;
+	padding-left: 0.1rem;
+	border:0.02rem solid #2A0000;
+}
+
+.img_01
+{
+	margin-top:0.1rem;
+}/*产品图片结束*/
+	
+.number p
+{
+	float:left;	
+}
+
+.number
+{
+	float:left;
+	width:2.3rem;
+	height:0.4rem;
+	margin-left:0.2rem;
+	margin-top:0.1rem;	
+}
+
+.number_01
+{
+	color:#00F;
+	width:0.8rem;
+	height:0.4rem;
+	line-height:0.4rem;
+	border:none;
+	line-height:0.4rem;
+	text-decoration:underline;
+}
+
+.total p
+{
+	float:left;
+}
+
+.total
+{
+    float:left;
+	width:2.7rem;
+	height:0.4rem;
+	margin-left:0.2rem;
+	margin-top:0.1rem;
+}
+
+.total_01
+{
+	color:red;
+	width:0.8rem;
+	height:0.4rem;
+	line-height:0.4rem;
+	border:none;
+	line-height:0.4rem;
+}
+
+#button
+{
+	height:0.6rem;
+    width:5.5rem;
+	margin-top:1rem;
+	margin-bottom:0.6rem;
+	margin-left:0.25rem;
+	background:#398;
+	color:#FFF;
+	font-size:0.14rem;
+	border:none;
+}
+.confirm{
+	height:1rem;
+	margin-bottom: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.wrap
+{
+    height:auto;
+    font-size:0.2rem;
+    background-color:#eee;
+    width:6rem;
+    margin:0 auto;
+}/*公用部分*/
+
+/*搜索框*/
+.seek
+{   
+    width:6rem;
+    height:0.6rem;
+	background-color:#eee;
+}
+
+#seek
+{
+	width:4.5rem;
+	height:0.4rem;
+	color:#666;
+	margin:0.1rem 0rem 0.1rem 0.27rem;
+	border:none;
+	padding-left:0.1rem;
+	float:left;
+}
+
+#btn_seek
+{
+	wdith:1.2rem;
+	height:0.4rem;
+	color:#0D0;
+	float:left;
+	margin-top:0.1rem;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
+	border:none;
+	background-color:#09F;
+}/*搜索框按钮结束*/
+
+
+.button
+{
+	width:6rem;	
+	height:0.5rem;
+}
+
+#button_a
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#FC6;
+	border:none;
+}
+
+#button_b
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#DDD;
+	border:none;
+	border-left:0.01rem solid #000;
+}/*发布接受按钮结束*/
+
+.refresh_task
+{
+	width:6rem;
+	height:6rem;
+	background-color:#FFF;
+	border-top:0.015rem solid #555;
+}
+
+.refresh
+{
+	width:2rem;
+	height:2rem;
+	margin-left:2.4rem;
+	margin-top:0.5rem;
+}
+
+.refresh li
+{
+	width:1.5rem;
+	height:0.4rem;
+	margin-top:1rem;
+}
+
+#refresh
+{
+	width:1.5rem;
+	height:0.4rem;
+	margin-top:0.2rem;
+	color:#FFF;
+}
+
+.navBox
+{
+  font-family:"微软雅黑";
+  font-size:0.14rem;
+  border-top:0.01rem solid #000;
+  background-color:#777;
+}
+
+.nav li
+{  
+  float:left; 
+  width:0.2rem;
+  margin:0.05rem 0.48rem;
+}
+
+.nav li a
+{	
+  display:inline-block;	
+}
+
+.nav li a span
+{
+  margin-top:-0.02rem;
+  padding-left:0.02rem;
+  color:#111;
+}/*底部导航结束*/
+
+
+
+
+
+

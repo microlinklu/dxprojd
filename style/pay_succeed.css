@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:auto;
+  font-size:0.3rem;
+  background-color:#FFF;
+  width:6rem;
+  margin:0 auto;
+}
+
+.top_pay
+{
+	width:6rem;
+	height:0.6rem;
+	font-size:0.3rem;
+	border-bottom:0.012rem solid #2A1F00;
+	/*position:fixed;*/
+
+}
+
+.top_pay ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+	line-height:0.6rem;
+}
+
+.right_title
+{
+	margin-left:0.2rem;
+	line-height:0.6rem;
+}/*top_pay结束*/
+
+.integral_pay
+{
+	width:5rem;
+	height:0.6rem;
+	margin-top:1rem;
+	margin-left:0.7rem;
+}
+
+.integral_pay p
+{
+	float:left;
+}
+
+.confirm
+{
+	width:6rem;
+	height:2rem;
+	margin-top:5.5rem;
+}
+
+.confirm_01
+{
+	width:5rem;
+	height:0.55rem;
+	margin-left:0.5rem;
+	margin-bottom:0.5rem;
+	font-size:0.3rem;
+	-webkit-border-radius: 0.1rem;
+	-moz-border-radius: 0.1rem;
+	border-radius: 0.1rem;
+	border:0;
+}
+

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:8rem;
+  font-size:0.26rem;
+  background-color:#FFF;
+  width:6rem;
+  margin:0 auto;
+}
+
+.top_circle
+{
+	width:6rem;
+	height:0.6rem;
+	padding-top:0.1rem;
+	background:rgb(0,0,0);
+}
+
+.return
+{
+	margin-left:0.15rem;
+	line-height:0.45rem;
+}/*top_circle结束*/
+
+.top_img
+{
+	width:6rem;
+	height:3.5rem;
+	overflow:hidden;
+	position:relative;
+}
+
+#background_img
+{
+	width:6rem;
+	height:3rem;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:333;
+}
+
+#head_portrait
+{
+	width:1rem;
+	height:1rem;
+	position:absolute;
+	bottom:0.2rem;
+	right:0.15rem;
+	z-index:555;
+}
+
+#name
+{
+	width:1.2rem;
+	height:0.3rem;
+	position:absolute;
+	bottom:0.6rem;
+	right:1.2rem;
+	z-index:555;
+}/*头部结束*/
+
+.content
+{
+	width:6rem;
+	height:5rem;;
+	margin-top:0.5rem;
+	position:absolute;
+	margin-left:0.1rem;
+	border-bottom:0.02rem solid #FF1F55;
+}
+
+#portrait
+{
+	width:0.6rem;
+	height:0.6rem;
+	position:absolute;
+	left:0.05rem;
+	top:0;
+}
+
+#name_a
+{
+	position:absolute;
+	left:0.7rem;
+	top:-0.05rem;
+}
+
+#title
+{
+	position:absolute;
+	left:0.7rem;
+	top:0.36rem;
+}
+
+#picture
+{    
+	position:absolute;
+	left:0.7rem;
+	top:1rem;
+	width:5rem;
+	height:3rem;
+}/*内容结束*/
+
+.navBox
+{
+  font-family:"微软雅黑";
+  font-size:0.14rem;
+  background-color:rgb(204,204,204);
+  margin-top:2rem;
+  position:fixed;
+  bottom:0;
+}
+
+.nav li
+{  
+  float:left; 
+  width:0.2rem;
+  margin:0.05rem 0.48rem;
+}
+
+.nav li a
+{	
+  display:inline-block;	
+}
+
+.nav li a span
+{
+  margin-top:-0.02rem;
+  padding-left:0.02rem;
+  color:#111;
+}/*底部导航结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

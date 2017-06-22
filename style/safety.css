@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  font-size:0.3rem;
+  background-color:#F66;
+  width:6rem;
+  height:10rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.top
+{
+	width:6rem;
+	height:0.6rem;
+	font-size:0.3rem;
+	border-bottom:0.02rem solid #CCC;
+	background:#FFF;
+	/*position:fixed;*/
+}
+
+.top ul li
+{
+	float:left;
+}
+
+.return
+{
+	margin-left:0.1rem;
+	line-height:0.6rem;
+}
+
+.right_title
+{
+	margin-left:0.2rem;
+	line-height:0.6rem;
+}/*top结束*/
+
+.content
+{
+	width:5rem;
+	height:0.35rem;
+	margin-top:0.7rem;
+	margin-bottom:0.5rem;
+}
+
+.content li
+{
+	float:left;
+    margin-left:0.35rem;
+	line-height:0.8rem;
+}
+
+#account
+{
+	color:#00F;
+	text-decoration:underline;
+	font-size:0.34rem;
+	margin-left:0.67rem;
+}
+
+#phone
+{
+	text-decoration:underline;
+	color:#00F;
+}
+
+#name
+{
+	width:2rem;
+	height:0.5rem;
+	margin-left:0.65rem;
+	font-size:0.25rem;
+	padding-left:0.2rem;
+}
+	
+#password
+{
+	width:2rem;
+	height:0.5rem;
+	margin-left:0.65rem;
+	font-size:0.25rem;
+	padding-left:0.2rem;
+}
+
+#reset
+{
+	width:2rem;
+	height:0.5rem;
+	margin-left:0.05rem;
+	font-size:0.25rem;
+	padding-left:0.2rem;
+}
+
+#email
+{
+	width:2rem;
+	height:0.5rem;
+	margin-left:0.65rem;
+	font-size:0.25rem;
+	padding-left:0.2rem;
+}
+	
+.affirm
+{
+	width:6rem;
+	height:2rem;
+	margin-top:4.7rem;
+}
+
+#affirm
+{
+	width:5rem;
+	height:0.6rem;
+	margin-left:0.5rem;
+	font-size:0.3rem;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

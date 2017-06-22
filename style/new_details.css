@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+	 height:10rem;
+     font-size:0.24rem;
+     background-color:#eee;
+     width:6rem;
+     margin:0 auto;
+	 position:relative;
+}
+
+.top
+{
+	width:6rem;
+	height:0.6rem;
+	border-bottom:0.01rem solid rgb(68,68,68);
+}
+
+.left
+{
+	width:0.2rem;
+	float:left;
+	margin-left:0.2rem;
+	margin-top:0.05rem;
+}
+
+.centre
+{
+	width:3rem;
+	line-height:0.6rem;
+	float:left;
+	margin-left:0.4rem;
+}/*标题结束*/
+
+.content
+{
+	width:6rem;
+}
+
+.content h2
+{
+	margin:0.2rem 0.18rem;
+}
+
+.date
+{
+	float:left;
+	margin-left:0.2rem;
+}
+
+.writer{
+	float:left;
+	margin-left:0.2rem;
+}
+
+.news_content
+{
+	width:5.6rem;
+	height:5rem;
+	margin-top:0.2rem;
+	margin-left:0.2rem;
+}
+
+.num
+{
+	margin-left:0.4rem;
+	margin-top:0.3rem;
+	width:1.5rem;
+	height:0.2rem;
+	float:left;
+}
+
+.num p span
+{
+	float:left;}
+
+.dianzan
+{   width:0.8rem;
+    height:0.2rem;
+	margin-left:1.3rem;
+	margin-top:0.3rem;
+	float:left;
+}
+
+.dianzan p span
+{
+	float:left;
+	margin-left:-0.5rem;
+}
+
+.complaint
+{
+	float:right;
+	margin-right:0.5rem;
+	margin-top:0.3rem;
+}/*新闻详细内容结束*/
+
+
+
+
+
+
+
+

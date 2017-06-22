@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>发布任务</title>
+<link type="text/css" rel="stylesheet" href="style/reset.css" />
+<link type="text/css" rel="stylesheet" href="style/publish_page.css" />
+<script src="js/base.js" type="text/javascript"></script>
+
+<meta name="Generator" content="LINSHOP v1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/province.js"></script>
+<script src="js/loadprovince.js"></script>
+</head>
+
+<body>
+     <div class="wrap">
+         <div class="seek">
+             <form>
+                  <div class="btn_seek">
+                      <input id="seek" type="text" value="搜索"/>
+                      <input id="btn_seek" type="button" value="搜索" />
+                  </div>
+             </form>
+         </div><!--搜索结束-->
+         
+         <div class="button">
+             <input id="button_a" type="button" value="发布任务" />
+             <input id="button_b" type="button" value="接受任务" />
+         </div> <!--按钮结束-->
+         
+         <div class="sponsor">
+             <ul>
+                <li><p>任务发起：</p></li>
+                <li><input id="sponsor" type="text" value="请输入任务标题"/></li>
+             </ul>   
+         </div>
+         <div class="address">
+             <form> 
+                 <p><span class="span1">国家地区：</span>
+                 <select name="country" id="country" onChange="goprovince('','','');"> </select></p>
+                 <p> <span class="span1">省份：</span><select id="province" name="province" onChange="gocity('','');"></select></p>
+                 <p><span class="span1">城市：</span><select id="city" name="city"></select></p>
+            </form>
+         </div>
+         <div class="minute" contenteditable="true">
+             请输入详细完成任务的路径
+         </div>
+         <div class="award">
+             <ul>
+                <li><p>奖励积分：</p></li>
+                <li><input id="award" type="text" value="请输入积分数量"/></li>
+                <li>积分</li>
+             </ul>      
+         </div>
+         <div class="sublic">
+            <input id="button" type="submit" value="确认提交" />
+         </div>
+         
+         <script>
+			  gocountry("country");
+			  SelectList("country","1");
+			  goprovince("country","province","city");
+         </script>    
+         
+       <div class="navBox">
+           <ul class="nav">	
+               <li>
+                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
+                     <span>首页</span>
+                   </a>   
+               </li>
+               <li>
+                   <a href="news.html"><img src="images/icon/news1.png"/><br />
+                     <span>新闻</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
+                     <span>任务</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
+                       <span>商城</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
+                     <span>我的</span>
+                   </a>      
+               </li>
+           </ul>
+        </div>
+     </div> 
+</body>
+</html>

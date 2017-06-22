@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>收货地址</title>
+<link type="text/css" rel="stylesheet" href="style/reset.css" />
+<link type="text/css" rel="stylesheet" href="style/address.css" />
+<script src="js/base.js" type="text/javascript"></script>
+<meta name="Generator" content="LINSHOP v1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/province.js"></script>
+<script src="js/loadprovince.js"></script>
+</head>
+
+<body>
+     <div class="wrap">
+         <div class="top_address">
+             <ul class="clearfix">
+                <li class="return"><a href="my.html"><img src="images/icon/back.png" class="return"/></a></li>
+                <li class="right_title">收货地址</li>  
+             </ul>
+         </div><!--top结束-->
+         
+         <div class="name">
+             <ul>
+                <li>昵称：大象</li>
+                <li>手机号：<span id="phone">13522254554</span></li>
+             </ul>
+         </div>
+        
+         <div class="address">
+              <form>    
+                   国家：<select name="country" id="country" onChange="goprovince('','','');"> </select>
+                   省份：<select id="province" name="province" onChange="gocity('','');"></select>
+                   城市：<select id="city" name="city"></select> 
+                   <p>详细地址：</p>
+                   <div class="minute" contenteditable="true">
+                        请输入详细收货地址
+                   </div>
+              </form>
+          </div>
+          
+
+          <div class="affirm">
+              <a href="pay.html"><input type="button" id="affirm" value="确&nbsp;&nbsp;&nbsp;&nbsp;认" /></a>
+         </div>
+         
+       <script>
+			  gocountry("country");
+			  SelectList("country","1");
+			  goprovince("country","province","city");
+       </script>    
+    
+     <div class="navBox">
+           <ul class="nav clearfix">
+               <li>
+                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
+                     <span>首页</span>
+                   </a>   
+               </li>
+               <li>
+                   <a href="news.html"><img src="images/icon/news1.png"/><br />
+                     <span>新闻</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
+                     <span>任务</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
+                       <span>商城</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
+                     <span>我的</span>
+                   </a>      
+               </li>
+           </ul>
+        </div>
+         
+     </div>
+</body>
+</html>

@@ -1,0 +1,905 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap
+{
+  height:auto;
+  font-size:0.12rem;
+  width:6rem;
+  margin:0 auto;
+}
+
+
+/*<<<<<<<<>>>>>>>>>>>>>>>>>>>首页部分>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.logo
+{ 
+  width:6rem;
+  height:0.7rem;
+/*  background:url(../images/mukewang/top_bg.jpg) bottom repeat-x; */
+  background-color:#AAA;
+}/*logo结束*/
+
+.left_Logo
+{
+  padding-left:2.15rem;
+  float:left;
+    vertical-align: middle;
+}
+
+.right_Logo
+{
+  font-size:0.3rem;
+  line-height:0.7rem;
+  font-family:"微软雅黑";
+}
+
+.logo_img
+{
+	margin-right:0.3rem;
+	padding-top:0.03rem;
+}
+
+.LBT
+{
+	width:6rem;
+	height: 1.6rem;
+	overflow: hidden;	
+}/*轮播图结束*/
+
+/*德孝之星推荐更多>>*/
+.recommend
+{
+  height:0.45rem;
+  border-bottom:0.015rem solid #AAA;
+}
+
+.leftArea
+{
+  font-family:"宋体";
+  font-size:0.2rem;
+  float:left;
+  line-height:0.45rem;
+  padding-left:0.1rem;
+}
+		  
+.rightArea
+{
+  width:0.8rem;
+  float:right;
+  line-height:0.45rem;
+  font-size:0.18rem;
+  color:#222;
+}
+
+#box1
+{ 
+  height:1.8rem;
+  width:6rem;
+  margin:0.2rem 0.1rem 0.2rem 0.1rem;
+}
+
+#box1 ul li
+{
+  height:2rem;
+  width:1.75rem;
+  /*border:0.015rem solid #EEE;*/
+  margin:0.03rem 0.09rem;
+  float:left;
+}
+#box1 ul li img{
+    width:1.75rem;
+    height: 1.6rem;
+}
+/*德孝之星推荐结束*/
+
+/*发布/接受任务*/
+#box2
+{
+  height:2.2rem;
+  width:5.9rem;
+  margin:0.02rem 0.03rem;
+  position:relative;
+  border-top:0.01rem solid #EEE;
+  border-bottom:0.01rem solid #EEE;
+}
+
+.Left_img
+{
+  height:2.1rem;
+  width:2.4rem;
+  /*border:0.01rem solid #EEE;*/
+  line-height:2.1rem;
+  margin:0.03rem 0.15rem;
+}
+.Left_img img{
+    width: 2.4rem;
+    height:1.8rem;
+    vertical-align: middle;
+}
+.top_btn
+{ 
+  width:2.8rem;
+  height:1rem;
+  position:absolute;
+  border-left:0.03rem solid #AAA;
+  border-bottom:0.03rem solid #AAA;
+  left:2.75rem;
+  top:0.1rem;
+  line-height:1rem;
+  font-family:"宋体";
+  font-size:0.3rem;
+}
+
+.bottom_btn
+{
+  width:2.8rem;
+  height:1rem;
+  border-left:0.03rem solid #AAA;
+  position:absolute;
+  left:2.75rem;
+  top:1.1rem;
+  line-height:1rem;
+  font-size:0.3rem;
+  font-family:"宋体";
+}
+
+.release
+{
+  padding-left:0.8rem;
+  color:#FC0;
+}
+
+.receive
+{
+  padding-left:0.8rem;
+  color:#200;
+}/*发布任务结束*/
+
+/*德孝公告*/
+.notice
+{
+  height:0.45rem;
+  border-bottom:0.02rem solid #AAA;
+  margin-bottom:0.1rem;
+}
+
+#box3
+{
+  height:5rem;
+}
+
+#box3 ul li
+{
+  height:1.2rem; 
+  margin-bottom:0.1rem;
+  border-bottom:0.03rem solid #AAA; 
+  overflow:hidden;
+    padding-left:0.05rem;
+}
+
+.title
+{
+  width:5.88rem;
+  height:1.08rem;
+  margin:0 0.05rem;
+}
+
+#title
+{
+  width:3rem;
+  height:0.86rem;
+  float:left;
+  margin-top:0.1rem;
+  margin-left:0.1rem;
+  line-height:0.29rem;
+  font-size:0.14rem;
+}
+
+.title_a
+{
+  color:#100;
+  font-size:0.14rem;
+}
+
+.img
+{
+  float:left;
+  margin:0 0.04rem;
+  width:1.3rem;
+  height:1.08rem;
+}
+.img img{
+    width:1.3rem;
+    height:1.08rem;
+}
+.information
+{
+  float:right;
+  height:1.07rem;
+  line-height:1.07rem;
+  margin-right:0.1rem;
+}/*德孝公告结束*/
+
+
+/*积分商城*/                                              	
+.shop
+{
+  height:0.45rem;
+  border-bottom:0.015rem solid #AAA;
+  margin-top:0.2rem;
+}		
+#box4
+{
+  padding-top:0.03rem;
+  height:8.5rem;
+}
+#box4 ul{
+    padding:0.1rem;
+}
+.shop_img
+{
+  float:left;	
+  width:1.79rem;
+  height:2.8rem;
+  border:1px solid #EEE;
+  margin:0.1rem 0.05rem;
+  overflow: hidden;
+}
+
+.img_a
+{
+  width:1.77rem;
+  height:1.78rem;
+  border:0.02rem solid #EEE;
+}
+
+.text
+{
+  width:1.6rem;
+  height:1rem;
+  line-height:0.35rem;
+  font-size:0.15rem;
+}
+.text p{
+    margin:0.05rem 0;
+}
+
+
+#box4 ul li p
+{
+  font-size:0.18rem;
+  float:left;
+  width:1.8rem;
+  height:0.2rem;
+}/*积分商城结束*/
+
+.footer
+{ 
+  width:6rem;
+  height:1.5rem;
+  text-align:center;
+  font-size:0.14rem;
+  margin-top:1.1rem;
+  margin-bottom:0.8rem;
+  line-height:0.3rem;
+}
+/*底部版权结束*/
+
+
+
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>新闻部分>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#news
+{
+	height:1.35rem;
+    width:6rem;
+	margin-top:0.3rem;;	
+	margin-bottom:0.18rem;
+    box-sizing: border-box;
+	border-bottom:0.03rem solid #AAA;
+    padding: 0.05rem 0.1rem 0 0.1rem;
+}
+
+#news ul li
+{
+	height:1.2rem;
+    width:1.85rem;
+    box-sizing: border-box;
+    border:0.01rem solid #EEE;
+    margin:0.02rem 0.04rem ;
+    float:left;
+}
+#news ul li img{
+    width: 1.8rem;
+    height: 1.2rem;
+}
+#news_title
+{
+  height:6rem;
+}
+
+#news_title ul li
+{
+  height:1.2rem; 
+  margin-bottom:0.1rem;
+  border-bottom:0.03rem solid #AAA; 
+  overflow:hidden;
+  float:left;
+}
+
+ 
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>任务页>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*搜索框*/
+.seek
+{   
+    width:6rem;
+    height:0.6rem;
+	background-color:#BBB;
+}
+
+#seek
+{
+	width:4.5rem;
+	height:0.4rem;
+	color:#666;
+	margin:0.1rem 0rem 0.1rem 0.27rem;
+	border:none;
+	padding-left:0.1rem;
+	float:left;
+	font-size:0.2rem;
+	color:rgb(221,221,221);
+}
+
+#btn_seek
+{
+	wdith:1.2rem;
+	height:0.4rem;
+	color:#0D0;
+	float:left;
+	margin-top:0.1rem;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
+	border:none;
+	font-size:0.24rem;
+	background-color:#09F;
+}/*搜索框按钮结束*/
+
+/*发布接受按钮*/
+.button
+{
+	width:6rem;	
+}
+
+#button_a
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#FC6;
+	border:none;
+	font-size:0.24rem;
+}
+
+#button_b
+{
+	height:0.5rem;
+    width:3rem;
+	float:left;
+	background:#DDD;
+	border:none;
+	border-left:0.01rem solid #000;
+	font-size:0.24rem;
+}
+
+.LBT_img
+{
+	width:6rem;
+	height:3rem;
+	overflow:hidden;	
+}
+
+/*底部大按钮*/
+.button Big
+{
+	width:6rem;
+	height:10rem;
+}
+
+#button_1
+{
+	height:0.5rem;
+    width:5.5rem;
+	margin-top:0.6rem;
+	margin-left:0.25rem;
+	color:rgb(68,68,68);
+	font-size:0.24rem;
+    border-radius: 0.1rem;
+    border:0;
+}
+
+#button_2
+{
+	height:0.5rem;
+    width:5.5rem;
+	margin-top:0.4rem;
+	margin-left:0.25rem;
+	margin-bottom:1rem;
+	color:rgb(68,68,68);
+	font-size:0.24rem;
+    border-radius: 0.1rem;
+    border:0;
+}/*按钮区结束*/
+
+
+
+
+
+
+
+
+/*>>><<<<<<<<<<<<<<<<<<<<<<<积分商城>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.top_shop 
+{
+	width:6rem;
+	height:0.7rem;
+	border-bottom:0.05rem solid #CCF;
+	background-color:#C9F;
+	/*position:fixed;*/
+}
+
+.top_shop ul li
+{
+	float:left;
+	line-height:0.7rem;
+}
+
+.return
+{
+	padding-top:0.07rem;
+	margin-left:0.1rem;
+}
+
+.right_Logo
+{
+	margin-left:1.8rem;
+}/*top结束*/
+
+.head_portrait
+{
+	width:6rem;
+	height:2.2rem;
+	background-color:#C9C;
+}
+
+.portrait
+{
+	width:0.8rem;
+	height:0.8rem;
+	border:0.01rem solid #EEE;
+	margin:0rem 2.5rem; 
+}
+
+#portrait
+{
+	margin:0.1rem;
+}
+
+#name
+{
+	font-size:0.2rem;
+	margin:0.4rem 2.5rem 0.1rem 2.5rem;
+	width:2rem;
+	height:0.3rem;
+}
+
+#btn_integral
+{
+	width:1rem;
+	height:0.4rem;
+	margin-left:1.3rem;
+	color:#F03;
+	float:left;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.1rem;
+    border:0;
+}
+
+#btn_centimetre
+{
+	width:1rem;
+	height:0.4rem;
+	margin-left:0.2rem;
+	color:#F03;
+	float:left;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.1rem;
+    border:0;
+}
+
+#btn_donate
+{   
+    width:1rem;
+	height:0.4rem;
+    float:left;
+	margin-left:0.2rem;
+	color:#F03;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.1rem;
+    border:0;
+}/*头像区结束*/
+
+.classify
+{
+	font-size:0.2rem;
+	background-color:#BBB;
+	width:6rem;
+	height:0.5rem;
+}
+
+.classify li	
+{
+	float:left;
+	line-height:0.5rem;
+	margin-left:0.18rem;	
+}/*分类导航条结束*/
+
+#classify_box
+{
+  height:2.2rem;
+  width:6rem;
+  position:relative;
+  background-color:#BBB;
+}
+
+.commodity_img
+{
+  height:2.2rem;
+  width:2.6rem;
+  border:0.01rem solid #EEE;
+  line-height:2.1rem;
+}
+
+.top_img03
+{ 
+  width:3.3rem;
+  height:1.2rem;
+  position:absolute;
+  left:2.7rem;
+  top:0rem;
+  border:0.01rem solid #EEE;
+  overflow:hidden;
+}
+
+.bottom_img03
+{
+  width:3.3rem;
+  height:0.96rem;
+  border:0.01rem solid #EEE;
+  position:absolute;
+  left:2.7rem;
+  top:1.24rem;
+  overflow:hidden;
+}
+
+.left_img03
+{ 
+  width:1.65rem;
+  height:0.99rem; 
+  float:left;
+  overflow:hidden;
+}
+
+.right_img03
+{
+  width:1.65rem;
+  height:0.99rem;
+  float:right;
+  overflow:hidden;
+}/*导航商品区结束*/
+
+.merchant_recommend
+{
+  font-size:0.2rem;
+  background-color:#BBB;
+  width:6rem;
+  height:0.5rem;
+}
+
+.rightArea03
+{
+  line-height:0.5rem;
+  margin-right:4.4rem;
+  float:right;
+  
+  
+}	
+.leftArea03
+{
+  padding:0.08rem 0.1rem;
+}
+
+#commodity03   
+{   
+    height:1.3rem;
+    width:6rem;
+	background-color:#BBB;
+}
+
+#commodity03 ul li
+{
+	height:1.3rem;
+    width:2rem;
+    float:left;
+	overflow:hidden;
+}/*商家推荐区结束*/
+	
+.member03	
+{
+  font-size:0.2rem;
+  background-color:#690;
+  width:6rem;
+  height:0.5rem;
+  border-top:0.05rem solid #EEE;
+}	
+	
+#member_box
+{
+  height:2.2rem;
+  width:6rem;
+  background-color:#690;
+  position:relative;
+}
+
+.member_img
+{
+  height:2.2rem;
+  width:2.6rem;
+  border:0.01rem solid #EEE;
+  line-height:2.1rem;
+  position:absolute;
+  left:3.4rem;
+  top:0rem;
+}
+
+.top03_img
+{ 
+  width:3.3rem;
+  height:1.2rem;
+  border:0.01rem solid #EEE;
+  overflow:hidden;
+}
+
+.bottom03_img
+{
+  width:3.3rem;
+  height:0.96rem;
+  border:0.01rem solid #EEE;
+  position:absolute;
+  left:0rem;
+  top:1.24rem;
+  overflow:hidden;
+}
+
+.left03_img
+{ 
+  width:1.65rem;
+  height:0.99rem; 
+  float:left;
+  overflow:hidden;
+}
+
+.right03_img
+{
+  width:1.65rem;
+  height:0.99rem;
+  float:right;
+  overflow:hidden;
+}/*会员专享区结束*/
+
+.new_product03
+{
+  font-size:0.2rem;
+  background-color:#F09;
+  width:6rem;
+  height:0.5rem;
+  border-top:0.05rem solid #EEE;
+}
+
+#product_box
+{
+  padding-top:0.03rem;
+  height:11rem;
+  background-color:#F09;
+}
+
+.product_img03
+{
+  float:left;	
+  width:1.78rem;
+  height:2.4rem;
+  border:1px solid #EEE;
+  margin:0.1rem;
+  overflow: hidden;
+}
+
+.img03_a
+{
+  width:1.77rem;
+  height:1.9rem;
+  border:0.01rem solid #EEE;
+}
+
+.text03
+{
+  width:1.65rem;
+  height:0.4rem;
+  border:0.01rem solid #EEE;
+  margin-left:0.06rem;
+  margin-top:0.03rem;
+  font-family:"微软雅黑";
+  font-size:0.12rew;
+}
+
+.text03_a 
+{ 
+  margin-left:-0.95rem; 
+}
+
+#product_box ul li p
+{
+  font-size:0.14rem;
+  float:left
+}/*新品上市结束*/
+
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>个人中心>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.set
+{
+	width:6rem;
+	height:0.6rem;
+	/*background:rgb(187,187,187);*/
+    background-color: #ccc;
+}
+	
+.set_img
+{
+	float:right;
+	margin:0.1rem;
+	margin-right:0.2rem;
+}
+
+.tuxiang
+{
+	width:6rem;
+	height:2.2rem;
+	border-bottom:0.02rem solid #006;
+	/*background:rgb(187,187,187);*/
+    background-color: #ccc;
+}
+	
+.tuxiang_a
+{
+	width:1rem;
+	height:1rem;
+	margin-left:0.3rem;
+	float:left;
+}
+
+.tuxiang_img
+{
+	width:1rem;
+	height:1rem;
+}
+
+.name_a
+{
+	width:4rem;
+	/*height:0.85rem;*/
+	margin-left:1.5rem;
+    padding-top:0.2rem;
+	font-size:0.26rem;
+}	
+
+.name_a p span
+{  
+    float:left;
+}
+
+.classify_a
+{
+	font-size:0.2rem;
+	width:5rem;
+	height:0.5rem;
+	margin-left:0.45rem;
+	margin-top:0.35rem;
+	font-size:0.26rem;
+}
+
+.classify_a li	
+{
+	float:left;
+	line-height:0.5rem;
+	margin-left:0.6rem;	
+}/*头像区结束*/
+
+.dingdan_a
+{
+	width:6rem;
+	height:0.8rem;
+    line-height: 0.8rem;
+	margin-top:0.01rem;
+	background:rgb(187,187,187);
+}
+
+#dingdan_a
+{
+
+    display: block;
+	width:1rem;
+    height: 0.6rem;
+	line-height:0.6rem;
+	padding-left:0.2rem;
+	float:left;
+	font-size:0.24rem;
+}
+
+#gengduo_a
+{
+    display: block;
+	width:2rem;
+    height:0.6rem;
+	line-height:0.6rem;
+	padding-right:0.01rem;
+	font-size:0.24rem;
+	float:right;
+}/*订单区结束*/
+
+.liebiao
+{
+	width:6rem;
+	/*background:rgb(187,187,187);*/
+    background-color: #ccc;
+}
+
+.liebiao ul li
+{
+	
+	border-bottom:0.02rem solid #cff;
+	width:5.7rem;
+	height:0.6rem;
+	font-size:0.2rem;
+	padding-left:0.3rem;
+	line-height:0.6rem;
+	overflow:hidden;
+	background-position: 0.4rem center;
+	margin-bottom:0.3rem;
+}
+
+.liebiao ul li img
+{
+	margin-right:0.2rem;
+	margin-bottom:-0.06rem;
+}/*个人中心结束*/
+
+
+
+
+
+
+
