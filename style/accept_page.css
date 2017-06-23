@@ -22,56 +22,52 @@
 
 #seek
 {
-	width:4rem;
-	height:0.5rem;
-	color:rgb(204,204,204);
+	width:4.5rem;
+	height:0.4rem;
+	color:#666;
 	margin:0.1rem 0rem 0.1rem 0.27rem;
 	border:none;
 	padding-left:0.1rem;
 	float:left;
-	font-size:0.26rem;
 }
 
 #btn_seek
 {
-	wdith:1.3rem;
-	height:0.5rem;
-	color:#fff;
+	wdith:1.2rem;
+	height:0.4rem;
+	color:#0D0;
 	float:left;
 	margin-top:0.1rem;
-	padding-left:0.4rem;
-	padding-right:0.4rem;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
 	border:none;
 	background-color:#09F;
-	font-size:0.26rem;
 }/*搜索框按钮结束*/
-
 
 .button
 {
-	width:6rem;	
-	height:0.8rem;
+	width:6rem;
+	background-color:#BBB;
+	margin-bottom:0.9rem;
 }
 
 #button_a
 {
-	height:0.7rem;
-    width:3rem;
+	height:0.5rem;
+	width:3rem;
 	float:left;
 	background:#DDD;
 	border:none;
-	font-size:0.28rem;
 }
 
 #button_b
 {
-	height:0.7rem;
-    width:3rem;
+	height:0.5rem;
+	width:3rem;
 	float:left;
 	background:#FC6;
 	border:none;
 	border-left:0.01rem solid #000;
-	font-size:0.28rem;
 }/*发布接受按钮*/
 
 .task

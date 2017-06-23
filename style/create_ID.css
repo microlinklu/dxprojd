@@ -46,7 +46,7 @@
 {
 	width:4rem;
 	height:0.6rem;
-	border-bottom:0.02rem solid #FFF;
+
 	margin-top:1rem;
 	margin-left:1rem;
 }
@@ -57,6 +57,8 @@
 	height:0.5rem;
 	border:none;
 	background:none;
+	color:#FFF;
+	border-bottom:0.02rem solid #FFF;
 	font-size:0.24rem;
 	line-height:0.6rem;
 }
@@ -65,7 +67,7 @@
 {
 	width:4rem;
 	height:0.6rem;
-	border-bottom:0.02rem solid #FFF;
+
 	margin-top:0.5rem;
 	margin-left:1rem;
 }
@@ -76,7 +78,7 @@
 	height:0.6rem;
 	border:none;
 	background:none;
-	color:#FFF;
+	border-bottom:0.02rem solid #FFF;
 	font-size:0.24rem;
 	line-height:0.8rem;
 }
@@ -85,7 +87,7 @@
 {
 	width:4rem;
 	height:0.6rem;
-	border-bottom:0.02rem solid #FFF;
+
 	margin-top:0.5rem;
 	margin-left:1rem;
 }
@@ -96,6 +98,8 @@
 	height:0.5rem;
 	border:none;
 	background:none;
+	color:#FFF;
+	border-bottom:0.02rem solid #FFF;
 	font-size:0.24rem;
 	line-height:0.6rem;
 }
