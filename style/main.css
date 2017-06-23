@@ -184,7 +184,7 @@
   margin:0 0.05rem;
 }
 
-#title
+.title1
 {
   width:3rem;
   height:0.86rem;
@@ -253,6 +253,10 @@
   border:0.02rem solid #EEE;
 }
 
+.img_a img{
+    width:1.77rem;
+    height:1.78rem;
+}
 .text
 {
   width:1.6rem;
@@ -267,7 +271,7 @@
 
 #box4 ul li p
 {
-  font-size:0.18rem;
+  font-size:0.16rem;
   float:left;
   width:1.8rem;
   height:0.2rem;
@@ -475,18 +479,24 @@
 .head_portrait
 {
 	width:6rem;
-	height:2.2rem;
+	height:2.8rem;
 	background-color:#C9C;
 }
 
 .portrait
 {
-	width:0.8rem;
-	height:0.8rem;
-	border:0.01rem solid #EEE;
-	margin:0rem 2.5rem; 
+	width:1.6rem;
+	height:1.6rem;
+	/*border:0.01rem solid #EEE;*/
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+	margin:0 auto;
 }
-
+.portrait img{
+    width:1.6rem;
+    height:1.6rem;
+}
 #portrait
 {
 	margin:0.1rem;
@@ -494,8 +504,8 @@
 
 #name
 {
-	font-size:0.2rem;
-	margin:0.4rem 2.5rem 0.1rem 2.5rem;
+	font-size:0.3rem;
+	margin:0.2rem 2.5rem 0.1rem 2.5rem;
 	width:2rem;
 	height:0.3rem;
 }
@@ -556,31 +566,44 @@
 
 #classify_box
 {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
   height:2.2rem;
   width:6rem;
+  box-sizing: border-box;
   position:relative;
   background-color:#BBB;
 }
-
+#classify_box ul li{
+    float:left;
+}
 .commodity_img
 {
   height:2.2rem;
   width:2.6rem;
+  box-sizing: border-box;
   border:0.01rem solid #EEE;
-  line-height:2.1rem;
+  text-align: center;
+  padding-top: 0.1rem;
 }
-
+.commodity_img img{
+    height:2.0rem;
+    width:2.5rem;
+}
 .top_img03
 { 
-  width:3.3rem;
+  width:3.1rem;
   height:1.2rem;
   position:absolute;
   left:2.7rem;
-  top:0rem;
+  top:0;
   border:0.01rem solid #EEE;
-  overflow:hidden;
+  margin-left:0.1rem;
 }
-
+.top_img03 img{
+    width:3.1rem;
+    height: 1.2rem;
+}
 .bottom_img03
 {
   width:3.3rem;
@@ -597,16 +620,24 @@
   width:1.65rem;
   height:0.99rem; 
   float:left;
-  overflow:hidden;
+  margin-left:0.1rem;
 }
-
+.left_img03 img{
+    width:1.65rem;
+    height:0.99rem;
+}
 .right_img03
 {
   width:1.65rem;
   height:0.99rem;
   float:right;
   overflow:hidden;
-}/*导航商品区结束*/
+}
+.right_img03 img{
+    width:1.65rem;
+    height:0.99rem;
+}
+/*导航商品区结束*/
 
 .merchant_recommend
 {

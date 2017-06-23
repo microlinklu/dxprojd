@@ -18,6 +18,7 @@ function Login(){
              console.log(data)
             if (data.state == '1') {
           window.location.href="homepage.html";
+                localStorage.setItem("phonenumber",$("#name").val());
             } else if (data.state== '0') {
                 alert("用户名，密码错误，请重新输入");
             } else {

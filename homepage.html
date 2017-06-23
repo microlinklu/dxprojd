@@ -14,63 +14,65 @@
 </head>
 
 <body>
-<div class="wrap">
-    <div class="logo"> 
-       <p class="left_Logo"><img src="images/icon/logo.png" class="logo_img"/></p>
-       <p class="right_Logo">德孝中国</p>  
-    </div><!--logo结束-->
-    
-    <div class="LBT" id="lbBox">
-       <div class="pic">
-           <ul>
 
-           </ul>
-       </div>
+<body ng-app="app" ng-controller="index">
+<div class="wrap">
+    <div class="logo">
+        <p class="left_Logo"><img src="images/icon/logo.png" class="logo_img"/></p>
+        <p class="right_Logo">德孝中国</p>
+    </div><!--logo结束-->
+
+    <div class="LBT" id="lbBox">
+        <div class="pic">
+            <ul>
+
+            </ul>
+        </div>
     </div><!--LBT结束-->
 
     <div class="recommend">
-            <h3 class="leftArea">德孝之星推荐</h3>
+        <h3 class="leftArea">德孝之星推荐</h3>
     </div>
-    <div id="box1">   
+    <div id="box1">
         <ul>
-            <li><a href="#"><img src="images/mukewang/css.jpg"/></a></li>
-            <li><a href="#"><img src="images/mukewang/css.jpg"/></a></li>
-            <li><a href="#"><img src="images/mukewang/css.jpg"/></a></li>
+            <li><a href="#"><img src="{{user1}}"/></a></li>
+            <li><a href="#"><img src="{{user2}}"/></a></a></li>
+            <li><a href="#"><img src="{{user3}}"/></a></a></li>
         </ul>
     </div>
     <div id="box2">
-         <ul>
+        <ul>
             <div class="Left_img">
-               <li>
-                  <a href="#"><img src="images/mukewang/css.jpg"/></a>
-               </li>
+                <li>
+                    <a href="task.html"><img src="{{task}}"/></a>
+                </li>
             </div>
             <div class="top_btn">
-               <li>
-                  <a href="publish_page.html" class="release">发布任务</a>
-               </li>
-             </div>
-             <div class="bottom_btn">
                 <li>
-                   <a href="accept_page.html" class="receive">接受任务</a> 
+                    <a href="publish_page.html" class="release">发布任务</a>
                 </li>
-             </div>
-         </ul>
+            </div>
+            <div class="bottom_btn">
+                <li>
+                    <a href="accept_page.html" class="receive">接受任务</a>
+                </li>
+            </div>
+        </ul>
     </div>
     <div class="notice">
-            <h3 class="leftArea">德孝公告</h3>
-            <a href="#" class="rightArea">更多&gt;&gt;</a>
+        <h3 class="leftArea">德孝公告</h3>
+        <a href="#" class="rightArea">更多&gt;&gt;</a>
     </div>
-    <div id="box3">   
+    <div id="box3">
         <ul>
 
         </ul>
     </div>
     <div class="shop">
-            <h3 class="leftArea">积分商城</h3>
-            <a href="#" class="rightArea">更多&gt;&gt;</a>
+        <h3 class="leftArea">积分商城</h3>
+        <a href="shop.html" class="rightArea">更多&gt;&gt;</a>
     </div>
-    <div id="box4">   
+    <div id="box4">
         <ul>
 
         </ul>
@@ -80,39 +82,48 @@
         <p>&nbsp;&nbsp;&nbsp;ICP备案号：（京）备101018975号</p>
         <p>技术支持：孔明智汇科技股份有限公司</p>
     </div>
-  <div class="navBox">
-           <ul class="nav">	
-               <li>
-                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
-                     <span>首页</span>
-                   </a>   
-               </li>
-               <li>
-                   <a href="news.html"><img src="images/icon/news1.png"/><br />
-                     <span>新闻</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
-                     <span>任务</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
-                       <span>商城</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
-                     <span>我的</span>
-                   </a>      
-               </li>
-           </ul>
-        </div>
+    <div class="navBox">
+        <ul class="nav">
+            <li>
+                <a href="homepage.html"><img src="images/icon/shouye.png"><br />
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="news.html"><img src="images/icon/news1.png"/><br />
+                    <span>新闻</span>
+                </a>
+            </li>
+            <li>
+                <a href="task.html"><img src="images/icon/renwu1.png" /><br />
+                    <span>任务</span>
+                </a>
+            </li>
+            <li>
+                <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
+                    <span>商城</span>
+                </a>
+            </li>
+            <li>
+                <a href="my.html"><img src="images/icon/wode1.png"/><br />
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 <script src="js/jquery-3.0.0.js"></script>
-
 <script src="js/homepage.js"></script>
+<script src="js/angular.min.js"></script>
+<script type="text/javascript">
 
+    var app=angular.module("app",[]);
+    app.controller("index",function($scope){
+        $scope.user1="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[0].touxiang.substring(8);
+        $scope.user2="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[1].touxiang.substring(8);
+        $scope.user3="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[2].touxiang.substring(8);
+        $scope.task="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).Task[0].picpath.substring(8);
+    })
+</script>
 </body>  
 </html>

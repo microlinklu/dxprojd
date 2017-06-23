@@ -6,10 +6,8 @@ $(function(){
         dataType:'jsonp',
         beforeSend:function(){},
         success:function(msg){
-           // console.log();
+            console.log(msg);
             if(typeof(Storage)!=="undefined"){
-               // console.log(JSON.stringify(msg))
-
                 localStorage.setItem("yy",JSON.stringify(msg));
                 var data=JSON.parse(localStorage.getItem("yy"));
                 console.log(data);
@@ -65,8 +63,8 @@ $(function(){
                 $("#box3 ul").append(li1);
             }
 
-            for(var s=data.Shop.length-3;s>data.Shop.length-12;s--){
-                var str2="http://localhost:3000"+data.Shop[s].pic_path.substring(8);
+            for(var s=data.shop.length-1;s>data.shop.length-10;s--){
+                var str2="http://localhost:3000"+data.shop[s].pic_path.substring(8);
                 var li2=document.createElement("li");
                 var div5=document.createElement("div");
                 div5.setAttribute("class","shop_img");
@@ -91,9 +89,9 @@ $(function(){
                 div7.appendChild(p1);
                 div7.appendChild(br);
                 div7.appendChild(p2);
-                p.innerHTML="产品名称:"+data.Shop[s].title;
-                p1.innerHTML="需用积分:"+data.Shop[s].integral;
-                p2.innerHTML="需用公分:"+data.Shop[s].price;
+                p.innerHTML="产品名称:"+data.shop[s].title;
+                p1.innerHTML="需用积分:"+data.shop[s].integral;
+                p2.innerHTML="需用公分:"+data.shop[s].price;
                 $("#box4 ul").append(li2);
             }
 
