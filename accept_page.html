@@ -7,6 +7,8 @@
 <link type="text/css" rel="stylesheet" href="style/reset.css" />
 <link type="text/css" rel="stylesheet" href="style/accept_page.css" />
 <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/jquery-3.0.0.js"></script>
+
 </head>
      
 <body>
@@ -25,51 +27,57 @@
              <input id="button_b" type="button" value="接受任务" />
          </div> <!--按钮结束-->
          
-         <div class="task">
-             <div class="top">
-                 <p>北京:&nbsp;<a href="#">老人院树木修剪及院内卫生清理</a></p>
-                 <img src="images/icon/shoucang.png" class="shoucang"/>
-             </div>  
-             <div class="btn_accept clearfix">
-                 <ul>
-                    <li><img src="images/icon/dianzan.png" class="dianzan"></li>
-                    <li><a href="task_interface.html"><input id="accept" type="button" value="接任务" /></a></li>
-                    <li><a href="overlook_page .html"><input id="ignore" type="button" value="忽略任务" /></a></li>
-                    <li><p >悬赏积分:<span>200分</span></p></li>
-                 </ul>
-             </div>
+         <div id="task">
+             <!--<div class="top">-->
+                 <!--<p>北京:&nbsp;<a href="#">老人院树木修剪及院内卫生清理</a></p>-->
+                 <!--<img src="images/icon/shoucang.png" class="shoucang"/>-->
+             <!--</div>  -->
+             <!--<div class="btn_accept clearfix">-->
+                 <!--<ul>-->
+                    <!--<li><img src="images/icon/dianzan.png" class="dianzan"></li>-->
+                    <!--<li><a href="task_interface.html"><input id="accept" type="button" value="接任务" /></a></li>-->
+                    <!--<li><a href="overlook_page .html"><input id="ignore" type="button" value="忽略任务" /></a></li>-->
+                    <!--<li><p >悬赏积分:<span>200分</span></p></li>-->
+                 <!--</ul>-->
+             <!--</div>-->
           </div><!--任务结束-->
 
-          <div class="navBox">
-           <ul class="nav">	
-               <li>
-                   <a href="#"><img src="images/icon/shouye.png"><br />
-                     <span>首页</span>
-                   </a>   
-               </li>
-               <li>
-                   <a href="#"><img src="images/icon/news1.png"/><br />
-                     <span>新闻</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="#"><img src="images/icon/renwu1.png" /><br />
-                     <span>任务</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="#"><img src="images/icon/gouwuch1.png" /><br />
-                       <span>商城</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="#"><img src="images/icon/wode1.png"/><br />
-                     <span>我的</span>
-                   </a>      
-               </li>
-           </ul>
-        </div>
+         <div class="navBox">
+             <ul class="nav">
+                 <li>
+                     <a href="homepage.html"><img src="images/icon/shouye.png"><br />
+                         <span>首页</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="news.html"><img src="images/icon/news1.png"/><br />
+                         <span>新闻</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="task.html"><img src="images/icon/renwu1.png" /><br />
+                         <span>任务</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
+                         <span>商城</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="my.html"><img src="images/icon/wode1.png"/><br />
+                         <span>我的</span>
+                     </a>
+                 </li>
+             </ul>
+         </div>
 
      </div>
+     <script src="js/accept_page.js">
+
+     </script>
+     <script>
+         taskList();
+     </script>
 </body>
 </html>

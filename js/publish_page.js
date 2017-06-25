@@ -2,8 +2,17 @@
  * Created by luwen on 2017/6/23.
  */
 function searchTask(){
-  var task=$("#seek")[0].value;
-
+  var task=$("#seek")[0].value;console.log(task)
+    $.ajax("http://localhost:3000/users/searchTask",{
+        datatype:'jsonp',
+        data:{
+            title:task
+        },
+        type:'get',
+        success:function(data){
+            console.log(data);
+        }
+    })
 }
 function submitTask(){
     //title,content,address,points,lonitude,latitude

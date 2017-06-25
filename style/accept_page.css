@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+#add{
+	float:left
+}
 
 .wrap
 {
@@ -70,14 +72,10 @@
 	border-left:0.01rem solid #000;
 }/*发布接受按钮*/
 
-.task
+#task
 {
 	width:6rem;
 	background-color:#EEE;
-	border-top:0.02rem solid rgb(0,0,0);
-	border-bottom:0.02rem solid #007FAA;
-	margin-bottom:0.02rem;
-	padding-bottom:0.05rem;
 }
 
 .top

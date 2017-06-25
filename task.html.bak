@@ -46,7 +46,7 @@ myFocus.set({
         
          <div class="button Big">
              <a href="publish_page.html"><input id="button_1" type="button" value="发起新任务" /></a>
-             <a href="accept_page.html"><input id="button_2" type="button" value="接受新任务" /></a>
+             <a href="accept_page.htm1"><input id="button_2" type="button" value="接受新任务" /></a>
          </div> <!--大按钮结束-->
          
        <div class="navBox">
