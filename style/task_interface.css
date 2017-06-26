@@ -4,7 +4,7 @@
 .wrap
 {
     font-size:0.12rem;
-    background-color:#eee;
+    background-color:#e50b0a;
     width:6rem;
 	height: 10rem;
     margin:0 auto;
@@ -34,7 +34,7 @@
 {
 	wdith:1.2rem;
 	height:0.4rem;
-	color:#0D0;
+	color:#fff;
 	float:left;
 	margin-top:0.1rem;
 	padding-left:0.3rem;
@@ -45,12 +45,12 @@
 
 .task_title
 {
-	width:5.7rem;
+	width:6rem;
 	height:0.8rem;
 	font-size:0.25rem;
 	margin-top:0.05rem;
-	border-top:0.02rem solid #888;
-	border-bottom:0.01rem solid #555;
+	/*border-top:0.02rem solid #fff;*/
+	border-bottom:0.01rem solid #fff;
 	line-height:0.65rem;
 	padding-left:0.3rem;
 }
@@ -64,7 +64,8 @@
 {
 	width:6rem;
 	height:0.9rem;
-	border-bottom:0.01rem solid #777;}
+	border-bottom:0.01rem solid #fff;
+}
 
 .date ul li
 {
@@ -75,8 +76,9 @@
 
 #integral
 {
-	color:#F60;
+	color:#fff;
 	margin-left:4.4rem;
+	float:left;
 }
 
 #writer
@@ -92,11 +94,11 @@
 
 .content
 {
-	width:5.66rem;
+	width:6rem;
 	height:auto;
 	margin-right:0.15rem;
 	margin-bottom:0.1rem;
-	border-bottom:0.01rem solid #777;
+	border-bottom:0.01rem solid #fff;
 	font-size:0.2rem;
     padding:0.2rem 0.17rem;
 }/*任务内容结束*/

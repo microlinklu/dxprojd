@@ -3,19 +3,20 @@
 
 .wrap
 {
-  height:8rem;
+  /*height:8rem;*/
   font-size:0.2rem;
   width:6rem;
   margin:0 auto;
+  background-color: #e50b0a;
 }
 
 .top_store 
 {
 	width:6rem;
-	height:0.6rem;
+	height:0.7rem;
 	padding-top:0.1rem;
 	font-size:0.25rem;
-	background:rgb(221,221,221);
+	background:#AAA;
 	/*position:fixed;*/
 }
 
@@ -44,9 +45,14 @@
 #lbBox
 {
 	width:6rem;
-	height:3rem;
-	overflow:hidden;	
-}/*轮播图结束*/
+	height:1.72rem;
+
+}
+#lbBox ul li img{
+    width:6rem;
+    height:3rem;
+}
+/*轮播图结束*/
                                             	
 .store
 {
@@ -73,7 +79,7 @@
 .store_img
 {
   float:left;	
-  width:1.82rem;
+  width:1.93rem;
   height:2.6rem;
   margin:0.02rem;
   overflow: hidden;
