@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+
 
 <body ng-app="app" ng-controller="index">
 <div class="wrap">
@@ -119,10 +119,10 @@
 
     var app=angular.module("app",[]);
     app.controller("index",function($scope){
-        $scope.user1="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[0].touxiang.substring(8);
-        $scope.user2="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[1].touxiang.substring(8);
-        $scope.user3="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).userVip[2].touxiang.substring(8);
-        $scope.task="http://localhost:3000"+JSON.parse(localStorage.getItem("yy")).Task[0].picpath.substring(8);
+        $scope.user1="http://www.chinadxr.cn:3000"+JSON.parse(localStorage.getItem("yy")).userVip[0].touxiang.substring(8);
+        $scope.user2="http://www.chinadxr.cn:3000"+JSON.parse(localStorage.getItem("yy")).userVip[1].touxiang.substring(8);
+        $scope.user3="http://www.chinadxr.cn:3000"+JSON.parse(localStorage.getItem("yy")).userVip[2].touxiang.substring(8);
+        $scope.task="http://www.chinadxr.cn:3000"+JSON.parse(localStorage.getItem("yy")).Task[0].picpath.substring(8);
     })
 </script>
 </body>  

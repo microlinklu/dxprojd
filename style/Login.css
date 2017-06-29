@@ -27,53 +27,49 @@
 
 .phone_email
 {
-	width:4rem;
-	height:0.65rem;
-	border-bottom:0.02rem solid #FFF;
-	margin-top:1rem;
-	margin-left:1rem;
+	width: 5rem;
+	height: 0.65rem;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
 #name
 {
-	width:3rem;
-	height:0.5rem;
-	border:none;
-	background:none;
-	font-size:0.24rem;
-	line-height:0.6rem;
-	padding-left:0.2rem;
-	color:#CCC;
+	width: 3rem;
+	height: 0.5rem;
+	background: none;
+	font-size: 0.24rem;
+	line-height: 0.6rem;
+	padding-left: 0.2rem;
+	color: #CCC;
 }
 
 .password_box
 {
-	width:4rem;
-	height:0.6rem;
-	border-bottom:0.02rem solid #FFF;
-	margin-top:0.5rem;
-	margin-left:1rem;
+	width: 4rem;
+	height: 0.6rem;
+	margin-top: 0.5rem;
+	margin-left: 1rem;
 }
 
 #password
 {
-	width:3rem;
-	height:0.6rem;
-	border:none;
-	background:none;
-	color:#FFF;
-	font-size:0.24rem;
-	line-height:0.8rem;
-	padding-left:0.2rem;
+	width: 3rem;
+	height: 0.5rem;
+	background: none;
+	color: #FFF;
+	font-size: 0.24rem;
+	line-height: 0.8rem;
+	padding-left: 0.2rem;
 }
 
 .forget_box
 {
-	width:1.3rem;
-	height:0.4rem;
-	position:absolute;
-	bottom:4.65rem;
-    right:0.2rem;
+	width: 1.3rem;
+	height: 0.4rem;
+	position: absolute;
+	bottom: 384px;
+	right: 17px;
 }
 
 #forget
@@ -87,15 +83,20 @@
 
 .btn_login
 {
-	width:4rem;
-	height:1.8rem;
-	margin:1.5rem 1rem;
+	width: 4rem;
+	height: 1.8rem
+	;
+	margin-bottom: 0.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
 }
 
 #login
 {
 	width:4rem;
 	height:0.8rem;
+	background:none;
 	font-size:0.3rem;
 	font-family:"微软雅黑";
 }
@@ -107,6 +108,6 @@
 	border:none;
 	background:none;
 	font-size:0.3rem;
-	line-height:1.3rem;
-}
 
+	margin:0.1rem auto
+}

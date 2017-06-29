@@ -3,8 +3,15 @@
 
 body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input
 {
-	margin:0;padding:0;
 	box-sizing: border-box;
+	padding-bottom: 0.1rem;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 5px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0.1rem;
 }
 
 img
@@ -75,25 +82,3 @@ a
 	margin-top:-0.02rem;
 	color:#111;
 }/*底部导航结束*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

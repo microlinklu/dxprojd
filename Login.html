@@ -18,18 +18,21 @@
              <img src="images/icon/touxianguang.png" />
          </div>
          <div class="phone_email">
-             <p><input type="email" id="name" value="手机号/邮箱" onfocus="javascript:if(this.value=='手机号/邮箱')this.value=''" /></p>
+             <p>用户名：<input type="email" id="name" value="手机号/邮箱" onfocus="javascript:if(this.value=='手机号/邮箱')this.value=''" /></p>
+                 <p>密&nbsp;&nbsp;&nbsp;码：<input type="password" id="password" value="请输入密码" onfocus="javascript:if(this.value=='请输入密码')this.value=''"/></p>
          </div>
-         <div class="password_box">
-             <p><input type="password" id="password" value="请输入密码" onfocus="javascript:if(this.value=='请输入密码')this.value=''"/></p>
+       <div class="password_box">
+         
          </div>
          <div class="forget_box">
              <input type="button" id="forget" value="忘记密码？"  onclick="forgetPass()" />
          </div>
          <div class="btn_login">
-             <input type="button" id="login" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录" onclick="Login()" />
-             <a href="create_ID.html"><input type="button" id="create" value="创建账号" /> </a>    
-         </div>
+             <input type="button" class="btn_login" id="login" onClick="Login()" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录" />
+             </div>
+       
+                      <input type="button" id="create" value="创建账号" onclick="javascript:window.location.href='create_ID.html'"/>
+             
      
      </div>
 </body>

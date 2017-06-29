@@ -1,9 +1,10 @@
 
 $(function(){
     $.ajax({
-        url:'http://localhost:3000/users/getIndex',
+        url:'http://www.chinadxr.cn:3000/users/getIndex',
         type:'get',
         dataType:'jsonp',
+        cache:false,
         beforeSend:function(){},
         success:function(msg){
             console.log(msg);
@@ -22,7 +23,7 @@ $(function(){
                     console.log(data.Pic[i].path);
                     var li=document.createElement("li");
                     var img=document.createElement("img");
-                    var str="http://localhost:3000"+data.Pic[i].path.substring(8);
+                    var str="http://www.chinadxr.cn:3000"+data.Pic[i].path.substring(8);
                     img.setAttribute("src",str);
                     img.setAttribute("width","600em");
                     img.setAttribute("height","172em");
@@ -31,7 +32,7 @@ $(function(){
                 }
             }
             for(var j=4;j>0;j--){
-                var str1="http://localhost:3000"+data.News[j].picPath.substring(8);
+                var str1="http://www.chinadxr.cn:3000"+data.News[j].picPath.substring(8);
                 var li1=document.createElement("li");
                 var div1=document.createElement("div");
                 div1.setAttribute("class","title");
@@ -64,7 +65,7 @@ $(function(){
             }
 
             for(var s=data.shop.length-1;s>data.shop.length-10;s--){
-                var str2="http://localhost:3000"+data.shop[s].pic_path.substring(8);
+                var str2="http://www.chinadxr.cn:3000"+data.shop[s].pic_path.substring(8);
                 var li2=document.createElement("li");
                 var div5=document.createElement("div");
                 div5.setAttribute("class","shop_img");

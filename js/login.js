@@ -5,7 +5,7 @@ function Login(){
 
     $.ajax({
         type:'get',
-        url:"http://localhost:3000/users/User",
+        url:"http://www.chinadxr.cn:3000/users/User",
 
         data:{
              phone:$("#name").val(),
@@ -21,9 +21,12 @@ function Login(){
                 localStorage.setItem("phonenumber",$("#name").val());
             } else if (data.state== '0') {
                 alert("用户名，密码错误，请重新输入");
-            } else {
-                alert("用户状态异常，请联系管理员解决");
+            } else if(data.state=='2'){
+                alert("用户名不存在，请注册后使用");
+            }else{
+                alert("用户状态异常")
             }
+
 
     },
         error:function(){
