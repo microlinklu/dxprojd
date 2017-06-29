@@ -30,6 +30,7 @@ function getMyInfo(){
         data:{
             phone:localStorage.getItem("phonenumber"),
                     },
+        cache:false,
         success:function(data){
             $("#0").val(data.data[0].age);
             $("#1").val(data.data[0].job);

@@ -7,40 +7,42 @@
 <link type="text/css" rel="stylesheet" href="style/reset.css" />
 <link type="text/css" rel="stylesheet" href="style/main.css" />
 <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/my.js"></script>
 </head>
   
 <body> 
     <div class="wrap">
     
-       <div class="set">
+        <div class="set">
           <a href="safety.html"><img src="images/icon/shezhi.png" class="set_img" /></a>
-       </div>  
+        </div>
        
-       <div class="tuxiang">
+        <div class="tuxiang">
            <div class="tuxiang_a">
-              <a href="safety.html"><img src="images/icon/touxiangkuang.png"></a>
+              <a href="my_information.html"><img src="images/icon/touxiangkuang.png"></a>
            </div>
            <div class="name_a">
-              <p><span>姓名：<p>dddd</p></span></p><br />
+              <p>姓名：<label id="name"></label></p><br />
               <p><span>称号：<p>德孝之星</p></span></p>
            </div>
            <div class="classify_a">
               <ul>
-                 <li><a href="collect.html">收藏</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
-                 <li><a href="like.html">点赞</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+                 <li onclick="taskList('care')">关注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+                 <li onclick="taskList('good')">点赞&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
                  <li onclick="javascript:alert('敬请期待')"><a href="#">圈子</a></li>
               </ul>
             </div>
         </div><!--头像区结束-->
-         
         <div class="dingdan_a">
                 <label id="dingdan_a">我的订单</label>
                 <a href="indent.html" id="gengduo_a">查看订单&nbsp;&nbsp;&gt;&gt;</a>
         </div><!--订单区结束--> 
         
-        <div class="liebiao" >
+        <div class="liebiao" style="overflow: auto" >
             <ul>
                <li onclick="javascript:window.location.href='my_integral.html'"><img src="images/icon/jifen.png" />我的积分</li>
+                <li onclick="taskList('accept')"><img src="images/icon/renwu1.png" />我的任务</li>
                <li onclick="javascript:alert('暂时无法获取公分信息')"><a href="#"><img src="images/icon/jifen2.png" />我的公分</a></li>
                <li onclick="javascript:alert('功能暂未开放')"><a href="#"><img src="images/icon/aixinjuan.png" />我的捐献</a></li>
                <li onclick="javascript:alert('开放充值功能后开启')"><a href="#"><img src="images/icon/denji.png" />等级称号</a></li>
@@ -49,7 +51,70 @@
                <li><a href="address_list.html"><img src="images/icon/tongxunlu.png" />通讯录</a></li>
             </ul>
         </div><!--个人中心结束-->
-        
+        <!--关注，点赞任务列表-->
+        <div id='mask'style="display:none;width:6rem;margin:0px auto;height:10rem;position:absolute;top:0px;">
+        <div  style="background-color: #aaaaaa;height:10rem;opacity: 0.6;" >
+        </div>
+        <div onclick="hide()" style="width:80%;height:80%;margin:1rem auto;opacity: 1;position:absolute;top:0px;left:10%;background-color: #fff">
+          <h2 align="center" style="margin-top:0.1rem"> 您<label id="type"></label>的任务</h2>
+            <ol id='taskol'style="margin-top:0.2rem;margin-left:0.1rem;list-style:circle;font-size: 15pt">
+
+            </ol>
+       </div>
+        </div>
+        <!--已接受任务列表-->
+        <div id='mask1'style="display:none;width:6rem;margin:0px auto;height:10rem;position:absolute;top:0px;">
+            <div  style="background-color: #aaaaaa;height:10rem;opacity: 0.6;" >
+            </div>
+            <div  style="width:80%;height:80%;margin:1rem auto;opacity: 1;position:absolute;top:0px;left:10%;background-color: #fff">
+                <button align="center" id="bt1" style="margin-top:0.1rem ; width:50%" onclick="taskList('accept')"> 您已接受的任务</button>
+                <button align="center" id="bt2" style="margin-top:0.1rem;width:50%;float:left" onclick="taskList('complete')"> 您发布过的任务</button>
+                <ol id='acctaskol'style="margin-top:0.2rem;margin-left:0.1rem;list-style:circle;font-size: 15pt">
+
+                </ol>
+                <button onclick="hide1()" style="width:100%">退出任务列表</button>
+                <!--<ol id='pubtask'style="display:none;margin-top:0.2rem;margin-left:0.1rem;list-style:circle;font-size: 15pt">-->
+
+                <!--</ol>-->
+            </div>
+        </div>
+
+        </div>
+        <!--任务完成-->
+        <div id="mask2" style="display:none;width:6rem;margin:0px auto;height:10rem;position:absolute;top:0px;">
+            <div  style="background-color: #aaaaaa;height:10rem;opacity: 0.6;" >
+            </div>
+            <div onclick="hide2()" style="width:80%;height:80%;margin:1rem auto;opacity: 1;position:absolute;top:0px;left:10%;background-color: #fff">
+            <div class="task_title">
+                <p>任务:&nbsp;<label id="comptitle"></label></p>
+            </div>
+            <div class="date">
+                <ul>
+                    <li><p id="integral">悬赏积分:&nbsp;<label id="points"></label></p></li><br /><br />
+                    <li><p id="writer">发起人:<label id="createper"></label></p></li>
+                    <li><p id="date">发布时间:<label id="time"></label></p></li>
+                </ul>
+            </div>
+            </div>
+            <div class="uploading">
+                <div class="plan">
+                    <p>提交进度:</p>
+                </div>
+                <ul>
+                    <div class="img">
+                        <li>上传照片</li>
+                        <li>上传照片</li>
+                        <li>上传照片</li>
+                        <li>上传照片</li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="confirm">
+                <input id="compbutton"  value="确认提交" onclick="compsubmit()" />
+            </div>
+
+        </div>
         <div class="navBox">
            <ul class="nav">	
                <li>

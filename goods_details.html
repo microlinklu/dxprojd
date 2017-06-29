@@ -2,8 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=no>
 <title>商品详情</title>
+<link rel="stylesheet" href="style/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="style/reset.css" />
 <link type="text/css" rel="stylesheet" href="style/goods_details.css" />
 <script src="js/js/myfocus-2.0.1.min.js" type="text/javascript"></script>
@@ -37,44 +39,44 @@ myFocus.set({
                </ul>
            </div>
        </div><!--轮播图结束-->
-       
-       <div id="product_box"> 
-           <div class="product_name">
-               <div class="name">
-                   <p><span>名称：<p>测试商品名称</p></span></p>
-               </div>
-               <div class="norms">
-                   <p><span>规格：<p>150*150</p></span></p>
-               </div> 
-               <div class="color">
-                   <p><span>颜色：<p>红黄蓝</p></span></p>
-               </div>
-               <div class="cost">
-                   <p><span>价格：<p>500积分</p></span></p>
-               </div>         
-           </div>
-           <div class="img" >
-              <ul>
-                 <li>
-                    <img src="images/mukewang/css.jpg"/>
-                 </li>
-                 <li class="img_01">
-                    <img src="images/mukewang/css.jpg" />
-                 </li>
-              </ul>   
-           </div><!--图片结束-->   
-        
-           <div class="number"> 
-               <p><span>数量：<input type="number" class="number_01" value="0000.00" /></span></p>&nbsp;件
-           </div>
-           <div class="total">
-               <p><span>合计：<input type="number" class="total_01" value="0000.00" /></span></p>&nbsp;积分
-           </div>
-           
-           <div class="confirm">
-              <a href="pay.html"><input id="button" type="submit" value="积分支付" /></a>
-           </div>
+
+       <!--购物车开始-->
+        <div class="container" ng-app="app" ng-controller="table">
+            <table class="table table"  ng-repeat="a in Products">
+                <tr>
+                    <td colspan="3"><strong>产品编号:</strong>{{a.num}}</td>
+                </tr>
+                <tr>
+                    <td>产品名称 : {{a.name}}</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3">购买数量 : <button class="btn " ng-click="reduce($index)">-</button>
+                        <input style="width: 1rem; height: 0.5rem; text-align:center;" type="number" ng-model="a.quan" >
+                        <button class="btn " ng-click="add($index)">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>产品单价:{{a.price}}</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>产品总价:{{a.price*a.quan}}</td><td></td><td></td>
+
+                </tr>
+                <tr> <td><button class="btn btn-danger btn-group-xs " ng-click="delete()">删除</button></td></tr>
+            </table>
+            <table class="table table">
+                <tr>
+                    <td colspan="2"><strong>总价格：</strong>{{totalPrice()}}</td>
+                    <td><strong>总数量：</strong>{{sumQuan()}}</td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-danger" ng-click="removeAll()">清空购物车</button></td>
+                    <td><button class="btn btn-success" ng-click="removeAll()">结算</button></td>
+                </tr>
+            </table>
+        <div class="kong"></div>
         </div>
+       <!--购物车结束-->
 
         <div class="navBox">
             <ul class="nav">
@@ -106,5 +108,63 @@ myFocus.set({
             </ul>
         </div>
     </div>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var app=angular.module("app",[]);
+        app.controller("table",function($scope){
+            $scope.Products=[
+                {num:"1000",name:"iPhone 6 Plus",price:"6888",quan:2},
+                {num:"1001",name:"iPhone ",price:"5288",quan:2},
+                {num:"1002",name:"iPhone 5S",price:"4188",quan:2},
+                {num:"1003",name:"iPhone 5c",price:"3288",quan:2}
+            ],
+//总价格
+                    $scope.totalPrice=function(){
+                        var total=0;
+                        angular.forEach($scope.Products,function(item){
+                            total+=item.price*item.quan;
+//                total+=$scope.Products[index].price*$scope.Products[index].quan;
+                        })
+                        return total;
+                    },
+//   总数量
+                    $scope.sumQuan=function(){
+                        var total=0;
+                        angular.forEach($scope.Products,function(item){
+                            total+=item.quan;
+
+//                total+=$scope.Products[index].quan;
+                        })
+                        return total;
+                    }
+// 删除一行
+            $scope.delete=function(index){
+                $scope.Products.splice(index,1 );
+            },
+// 删除全部
+                    $scope.removeAll=function(){
+                        $scope.Products=[];
+                    },
+//数量增加
+                    $scope.add=function(index){
+                        $scope.Products[index].quan++;
+                    }
+//数量减少
+            $scope.reduce=function(index){
+                if($scope.Products[index].quan>1){
+                    $scope.Products[index].quan--;
+                }
+                else{
+                    var info=confirm("是否删除该元素");
+                    if(info){
+                        $scope.delete();
+                    }
+                    else{
+                        $scope.Products[index].quan=1;
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 </html>
