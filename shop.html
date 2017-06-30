@@ -28,6 +28,7 @@
           <a href="my_integral.html"><input id="btn_integral" type="button" value="我的积分" /></a>
           <a href="#"><input id="btn_centimetre" type="button" value="我的公分" /></a>
           <a href="#"><input id="btn_donate" type="button" value="捐献任务" /></a>
+           <a href="goods_details.html"><input id="btn_donate" type="button" value="购物车" /></a>
        </div><!--头像区结束-->
        <div class="classify">
           <ul>
@@ -87,11 +88,11 @@
         </div>
 
         <div class="classify_box">
-              <a class="commodity_img" href="goods_details.html"><img src="{{shop_tui1}}"/></a>
-              <a class="top_img03" href="goods_details.html"><img src="{{shop_tui1}}"/></a>
+              <a class="commodity_img" href="good_detail.html"><img src="{{shop_tui1}}"/></a>
+              <a class="top_img03" href="good_detail.html"><img src="{{shop_tui1}}"/></a>
             <div class="bottom_img03">
-              <a class="left_img03" href="goods_details.html" class="left03_img"><img src="{{shop_tui1}}"/></a>
-              <a class="right_img03" href="goods_details.html" class="right03_img"><img src="{{shop_tui1}}"/></a>
+              <a class="left_img03" href="good_detail.html" class="left03_img"><img src="{{shop_tui1}}"/></a>
+              <a class="right_img03" href="good_detail.html" class="right03_img"><img src="{{shop_tui1}}"/></a>
             </div>
         </div><!--会员专享结束-->
  
@@ -103,7 +104,7 @@
            <ul ng-repeat="a in shop">
                 <li>
                    <div class="shop_img" >
-                        <a class="img_a" href="goods_details.html"><img src="'http://192.168.0.195'+{{a.pic_path.substring(8)}}"/></a>
+                        <a class="img_a" href={{"good_detail.html?id="+a.id}}><img src="'http://192.168.0.195'+{{a.pic_path.substring(8)}}"/></a>
                       <div class="text">
                         <p>产品名称:{{a.title}}</p>
                         <p>需用积分:{{a.integral}}</p>

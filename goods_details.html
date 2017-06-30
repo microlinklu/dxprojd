@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=no>
-<title>商品详情</title>
+<title>购物车</title>
 <link rel="stylesheet" href="style/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="style/reset.css" />
 <link type="text/css" rel="stylesheet" href="style/goods_details.css" />
@@ -24,7 +24,7 @@ myFocus.set({
        <div class="top_details">
           <ul>
              <li class="return"><a href="shop.html"><img src="images/icon/back.png" class="return"/></a></li>
-             <li class="right_title">商品详情</li>  
+             <li class="right_title">购物车</li>  
           </ul>
        </div><!--top结束-->
        
@@ -41,17 +41,18 @@ myFocus.set({
        </div><!--轮播图结束-->
 
        <!--购物车开始-->
-        <div class="container" ng-app="app" ng-controller="table">
+        <div class="container" ng-app="app" ng-controller="table" style="background-color:red">
             <table class="table table"  ng-repeat="a in Products">
+      
                 <tr>
-                    <td colspan="3"><strong>产品编号:</strong>{{a.num}}</td>
+                    <td colspan="3"><strong>产品编号:</strong>{{a.gid}}</td>
                 </tr>
                 <tr>
-                    <td>产品名称 : {{a.name}}</td><td></td><td></td>
+                    <td>产品名称 : {{a.title}}</td><td></td><td></td>
                 </tr>
                 <tr>
                     <td colspan="3">购买数量 : <button class="btn " ng-click="reduce($index)">-</button>
-                        <input style="width: 1rem; height: 0.5rem; text-align:center;" type="number" ng-model="a.quan" >
+                        <input style="width: 1rem; height: 0.2rem; text-align:center;" type="number" ng-model="a.num" >
                         <button class="btn " ng-click="add($index)">+</button>
                     </td>
                 </tr>
@@ -59,10 +60,10 @@ myFocus.set({
                     <td>产品单价:{{a.price}}</td><td></td><td></td>
                 </tr>
                 <tr>
-                    <td>产品总价:{{a.price*a.quan}}</td><td></td><td></td>
+                    <td>产品总价:{{a.price*a.num}}</td><td></td><td></td>
 
                 </tr>
-                <tr> <td><button class="btn btn-danger btn-group-xs " ng-click="delete()">删除</button></td></tr>
+                <tr> <td><button class="btn btn-danger btn-group-xs " ng-click="delete($index)">删除</button></td></tr>
             </table>
             <table class="table table">
                 <tr>
@@ -71,7 +72,7 @@ myFocus.set({
                 </tr>
                 <tr>
                     <td><button class="btn btn-danger" ng-click="removeAll()">清空购物车</button></td>
-                    <td><button class="btn btn-success" ng-click="removeAll()">结算</button></td>
+                    <td><button class="btn btn-success" ng-click="pay()">结算</button></td>
                 </tr>
             </table>
         <div class="kong"></div>
@@ -108,51 +109,102 @@ myFocus.set({
             </ul>
         </div>
     </div>
+     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/angular.min.js"></script>
     <script>
-        var app=angular.module("app",[]);
-        app.controller("table",function($scope){
-            $scope.Products=[
-                {num:"1000",name:"iPhone 6 Plus",price:"6888",quan:2},
-                {num:"1001",name:"iPhone ",price:"5288",quan:2},
-                {num:"1002",name:"iPhone 5S",price:"4188",quan:2},
-                {num:"1003",name:"iPhone 5c",price:"3288",quan:2}
-            ],
-//总价格
-                    $scope.totalPrice=function(){
-                        var total=0;
-                        angular.forEach($scope.Products,function(item){
-                            total+=item.price*item.quan;
-//                total+=$scope.Products[index].price*$scope.Products[index].quan;
-                        })
-                        return total;
+     
+        window.onload=function(){
+              $.ajax({
+                url:"http://localhost:3000/users/getcar",
+                datatype:'jsonp',
+                data:{
+                    phone:localStorage.getItem("phonenumber")
                     },
-//   总数量
-                    $scope.sumQuan=function(){
-                        var total=0;
-                        angular.forEach($scope.Products,function(item){
-                            total+=item.quan;
-
-//                total+=$scope.Products[index].quan;
-                        })
-                        return total;
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(typeof(Storage)!=="undefined"){
+                        localStorage.setItem("yy",JSON.stringify(data));
                     }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+            });
+
+        }
+
+    var  app=angular.module("app",[]);
+        app.controller("table",function($scope){ 
+        $scope.Products=JSON.parse(localStorage.getItem("yy"));
+//总价格：
+            $scope.totalPrice=function(){
+                var total=0;
+                angular.forEach($scope.Products,function(item){
+                    // var arr=JSON.parse(item);
+                    total+=item.price*item.num;
+                })
+                return total;
+            },
+//   总数量
+            $scope.sumQuan=function(){
+                var total=0;
+                angular.forEach($scope.Products,function(item){
+                    total+=parseInt(item.num);
+                })
+                return total;
+            }
 // 删除一行
             $scope.delete=function(index){
-                $scope.Products.splice(index,1 );
-            },
+                $scope.Products.splice(index,1);
+        },
 // 删除全部
-                    $scope.removeAll=function(){
-                        $scope.Products=[];
-                    },
+            $scope.removeAll=function(){
+                  var phone=localStorage.getItem("phonenumber");
+                   $.ajax({
+                     url:"http://localhost:3000/users/delall",
+                     datatype:'jsonp',
+                     data:{
+                         phone:phone
+                         },
+                     cache:false,
+                     type:'get',
+                     success:function(data){
+                         if(data=='1'){
+                           
+                         }
+                     }
+                 });
+                $scope.Products=[];
+            },
 //数量增加
-                    $scope.add=function(index){
-                        $scope.Products[index].quan++;
-                    }
+            $scope.add=function(index){
+                $scope.Products[index].num++;
+            },
+//结算
+            $scope.pay=function(index){
+                 var phone=localStorage.getItem("phonenumber");
+                 $.ajax({
+                    url:"http://localhost:3000/users/pay",
+                    datatype:'jsonp',
+                    data:{
+                        arr:$scope.Products,
+                        phone:phone,
+                      },
+                    cache:false,
+                    type:'get',
+                    success:function(data){
+                      if(data){
+                         location.href="./pay.html";
+                      }
+                     }
+                });
+            },
 //数量减少
             $scope.reduce=function(index){
-                if($scope.Products[index].quan>1){
-                    $scope.Products[index].quan--;
+                if($scope.Products[index].num>1){
+                    $scope.Products[index].num--;
                 }
                 else{
                     var info=confirm("是否删除该元素");
@@ -160,7 +212,7 @@ myFocus.set({
                         $scope.delete();
                     }
                     else{
-                        $scope.Products[index].quan=1;
+                        $scope.Products[index].num=1;
                     }
                 }
             }

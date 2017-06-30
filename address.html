@@ -12,7 +12,6 @@
 <script src="js/province.js"></script>
 <script src="js/loadprovince.js"></script>
 </head>
-
 <body>
      <div class="wrap">
          <div class="top_address">
@@ -24,7 +23,7 @@
          
          <div class="name">
              <ul>
-                <li>昵称：大象</li>
+                <li class="username">昵称：大象</li>
                 <li>手机号：<span id="phone">13522254554</span></li>
              </ul>
          </div>
@@ -43,13 +42,64 @@
           
 
           <div class="affirm">
-              <a href="pay.html"><input type="button" id="affirm" value="确&nbsp;&nbsp;&nbsp;&nbsp;认" /></a>
+              <a class="user_info"><input type="button" id="affirm" value="确&nbsp;&nbsp;&nbsp;&nbsp;认" /></a>
          </div>
-         
+         <script src="js/jquery-3.0.0.js"></script>
        <script>
 			  gocountry("country");
 			  SelectList("country","1");
 			  goprovince("country","province","city");
+
+        $('.user_info').click(function(){
+            var des=$('.minute').html();
+            var country=$('#country').find("option:selected").text();
+            var province=$('#province').find("option:selected").text();
+            var city=$('#city').find("option:selected").text();
+            var address=$.trim(province)+$.trim(city)+$.trim(des);
+            $.ajax({
+               url:"http://localhost:3000/users/up_info",
+                datatype:'jsonp',
+                data:{
+                      phone:localStorage.getItem("phonenumber"),
+                      address:address
+                    },
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(data){
+                       location.href="./pay.html";
+                    }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+            })
+        })
+
+   window.onload=function(){
+       $.ajax({
+               url:"http://localhost:3000/users/user_info",
+                datatype:'jsonp',
+                data:{
+                    phone:localStorage.getItem("phonenumber")
+                    },
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(data){
+                        var str="昵称："+data[0].name;
+                        $('.username').html(str);
+                        $('#phone').html(data[0].phone);
+                    }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+       })
+    }
+
        </script>    
     
      <div class="navBox">

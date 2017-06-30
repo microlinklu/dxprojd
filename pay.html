@@ -11,34 +11,34 @@
 
 <body>
      <div class="wrap">
-         <div class="top_pay">
+         <div class="top_pay" style="background-color:rgb(0,0,0);color:gray">
              <ul>
                 <li class="return"><a href="goods_details.html"><img src="images/icon/back.png" class="return"/></a></li>
                 <li class="right_title">支付积分</li>  
              </ul>
          </div><!--top结束-->
        
-         <div class="pay_content">
+         <div class="pay_content" style="background-color:red">
              <div class="integral_pay">
-                  <p><span>支付积分：<p>1000.00</p></span></p>
+                  <p><span>支付积分：<p class="integral"></p></span></p>
              </div><br />
              <div class="message">
                  <form action="#" method="get">
                  <p>给商家留言：</p>
-                 <textarea name="" cols="80" rows="15"></textarea>
+                 <textarea name="" id="message" cols="80" rows="15"></textarea>
                  </form>
              </div>
              <div class="address">
                  <ul>
-                    <li> <p><span>收货地址：<p>北京市朝阳区二龙路110号&nbsp;&nbsp;&nbsp;大象&nbsp;收</p></span></p></li><br />
-                    <li class="bottom"><p><span>手机号：<p>15102247458</p></span></p></li>
+                    <li class="add"></li><br />
+                    <li class="bottom"><p><span>手机号：<p class="phone">11111111111</p></span></p></li>
                     <form>
                          <a href="address.html"><input type="button" class="modify" value="修改地址" /></a>
                     </form>
                  </ul>
              </div>
              <div class="confirm">
-                 <input type="button" class="confirm_01" value="确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定" />
+                 <input type="button" class="confirm_01" class="sure" value="确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定" />
              </div>
          </div>
 
@@ -75,3 +75,80 @@
      </div>
 </body>
 </html>
+<script src="js/jquery-3.0.0.js"></script>
+<script>
+     window.onload=function(){
+       $.ajax({
+                url:"http://localhost:3000/users/getcar",
+                datatype:'jsonp',
+                data:{
+                    phone:localStorage.getItem("phonenumber")
+                    },
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(data){
+                        var total=0;
+                        for(var i=0;i<data.length;i++){
+                            total+=data[i].num*data[i].price;
+                        }
+                        $('.integral').html(total);
+                    }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+        });
+       $.ajax({
+               url:"http://localhost:3000/users/user_info",
+                datatype:'jsonp',
+                data:{
+                    phone:localStorage.getItem("phonenumber")
+                    },
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(data){
+                        
+                        $('.phone').html(data[0].phone);
+                        if(data[0].address){
+                             var info="<p><span>收货地址：<p>"+ data[0].address +"&nbsp;&nbsp;&nbsp;"+ data[0].name+"&nbsp;收</p></span></p>";
+                         }else{
+                             var info="<p><span>收货地址：<p>请修改您的详细信息</p></span></p>";
+                         }
+                       
+                        $('.add').html(info);
+                    }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+       })
+    }
+    $('.confirm').click(function(){
+        var message=$('#message').val();
+        var phone=localStorage.getItem("phonenumber");
+        var integral=$('.integral').html();
+        $.ajax({
+                url:"http://localhost:3000/users/user_pay",
+                data:{
+                    phone:phone,
+                    message:message,
+                    integral:integral
+                },
+                cache:false,
+                type:'get',
+                success:function(data){
+                    if(data){
+                        location.href="./shop.html"
+                    }
+                    else{
+                        alert("浏览器不支持本地存储！");
+                    }
+                  
+                }
+        })
+    })
+</script>

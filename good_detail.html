@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>商品详情页</title>
+<link type="text/css" rel="stylesheet" href="style/reset.css" />
+<link type="text/css" rel="stylesheet" href="style/new_details.css" />
+<script src="js/base.js" type="text/javascript"></script>
+<style type="text/css">
+    .car{
+      display:block;font-size:0.15rem;background-color:#ddd;border-radius: 0.1rem;
+      width:1.1rem;
+      height:0.3rem;
+      text-align:center;
+      line-height:0.3rem;
+      text-decoration: none;
+      color:red;
+    }
+</style>
+</head>
+
+<body>
+     <div class="wrap" ng-app="app" ng-controller="Info">
+        <div class="top">
+            <div class="left">
+                <a href="shop.html"><img src="images/icon/back.png" /></a>
+            </div>
+            <div class="centre">
+                <h3>商品详情页</h3>
+            </div>
+        </div>
+        <div class="content" style="background-color:red">
+            <h2 >{{title}}</h2>
+            <p class="writer"><span>价格：<p>{{price}}</p></span></p>
+            <p class="writer"><span>颜色：<p>{{color}}</p></span></p><br />
+            <a href="javascript:;" onclick="add()" class="car">加入购物车</a>
+            <p class="news_content">{{centimetre}}</p>
+            <!-- <div class="dianzan">
+               <p><span><img src="images/icon/dianzan.png" /><p>&nbsp;&nbsp;99</p></span></p>
+            </div>
+            <div class="complaint">
+               <p>投诉</p>
+            </div> -->
+        </div><!--*/详细新闻内容*-->
+        
+       <div class="navBox">
+           <ul class="nav">	
+               <li>
+                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
+                     <span>首页</span>
+                   </a>   
+               </li>
+               <li>
+                   <a href="news.html"><img src="images/icon/news1.png"/><br />
+                     <span>新闻</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
+                     <span>任务</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
+                       <span>商城</span>
+                   </a>      
+               </li>
+               <li>
+                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
+                     <span>我的</span>
+                   </a>      
+               </li>
+           </ul>
+        </div><!--底部导航结束-->   
+     
+     </div>
+     <script src="js/jquery-3.0.0.js"></script>
+     <script src="js/angular.min.js"></script>
+     <script type="text/javascript">
+         var url = window.location.href;
+         // var index=url.charAt(url.length-1);
+         // var num=parseInt(index.replace(/\s/g,""));
+         var arr=url.split('?');
+         var num=arr[1].split("=")[1];
+         var app=angular.module("app",[]);
+         app.controller("Info",function($scope){
+             $scope.title=JSON.parse(localStorage.getItem("yy")).shop[num-1].title;
+             $scope.color=JSON.parse(localStorage.getItem("yy")).shop[num-1].color;
+             $scope.price=JSON.parse(localStorage.getItem("yy")).shop[num-1].price;
+             $scope.centimetre=JSON.parse(localStorage.getItem("yy")).shop[num-1].centimetre;
+         })
+
+         function add(){
+            $.ajax({
+                url:"http://localhost:3000/users/add_car",
+                datatype:'jsonp',
+                type:'get',
+                cache:false,
+                data:{
+                    phone:localStorage.getItem('phonenumber'),
+                    gid:num
+                },
+                success:function(data){
+                    if(data){
+                        alert("购物车添加成功");
+                    }
+                }
+            });
+        }
+     </script>
+</body> 
+</html>
