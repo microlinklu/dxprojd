@@ -13,9 +13,8 @@ function taskList(type){
         $("#mask1").css('display','block');
         $("#bt1").css('background','#FC6')
         $("#bt2").css('background','#DDD')
-        $("#acctaskol").removeAll;
-    }else if(type=='complete'){
-      console.log(234)
+
+    }else if(type=='publish'){
 
         $("#bt2").css('background','#FC6')
         $("#bt1").css('background','#DDD')
@@ -36,8 +35,10 @@ function taskList(type){
             console.log(data);
             for(var i=0;i<data.length;i++){
                 var li=document.createElement('li');
-                if(type=='accept'||type=='complete'){
+                if(type=='accept'){
                     li.setAttribute("onclick","taskDetail("+i+","+data[i]+")")
+                }else if(type=='publish'){
+                    li.setAttribute("onclick","publishDetail("+i+","+data[i]+")")
                 }
                    var table=document.createElement('table');
                    var tr1=document.createElement('tr');
@@ -86,28 +87,113 @@ function hide(){
 function hide1(){
     $("#mask1").css("display","none");
 }
-function hide2(){
-    $("#mask2").css("display","none");
+function backtaskplan(){
+    $("#task_plan").css("display","none");
 }
+function backatask(){
+    $("#atask").css("display","none");
+}
+//任务明细
 function taskDetail(i,task){
-  $("#comptitle").text(task[i].title);
-    $("#points").text(task[i].points);
-    $("#createper").text(task[i].initiator);
-    $("#time").text(task[i].createtime);
-   $("#compbutton").onclick=compsubmit(task[i].id);
+    $("#task_plan").css('display','block');
+    $("#taskplan_title").text(task[i].title);
+    $("#taskplan_points").text(task[i].points);
+    $("#taskplan_initor").text(task[i].initiator);
+    $("#taskplan_createdate").text(task[i].createtime);
+    $("#bttpsub").onclick=getPhoto(task[i].id);
 
 }
-function compsubmit(id){
+//任务完成上传图片数据
+function compsubmit(id,imgdata){
+var filename=imgdata.substring(imgdata.lastIndexOf('/')+1);
     $.ajax({
         url:"http://localhost:3000/users/completeTask",
         data:{
             id:id,
-            picname:filename
-        },
+            picname:filename,
+               },
         datatype:'jsonp',
         type:'post',
         success:function(data){
             alert("任务完成")
         }
+    });
+    //上传图片
+    var deferred  = when.defer(),
+        options = new FileUploadOptions();
+    options.fileKey = "file",
+        options.fileName = filename;
+    options.mimeType = "image/jpeg";
+
+    var ft = new FileTransfer();
+    // 上传回调
+    ft.onprogress = showUploadingProgress;
+    navigator.notification.progressStart("", "当前上传进度");
+    ft.upload( imageURI, encodeURI('http://www.chinadxr.cn:3000/uploads'), function(){
+        deferred.resolve( imageURI );
+        navigator.notification.progressStop();
+    } , null, options);
+}
+//任务完成确认 iscomplete=2上传用户phone，
+function confirmTask(id){
+    $.ajax({
+        url:"http://localhost:3000/users/confirmTask",
+        datatype:'jsonp',
+        type:'post',
+        data:{
+            id:id
+        },
+        success:function(data){
+            alert("任务完成确认成功")
+        }
+    });
+
+}
+//已发布任务详情
+var app=angular.module("app",[]);
+//任务完成详情确认
+function publishDetail(i,task){
+$("#atask").css('display','block')
+
+    app.controller("task",function($scope){
+        $scope.title=task[i].title;
+        $scope.completetime=task[i].completetime;
+        if(task[i].iscomplete){
+            $scope.complete="完成";
+        }else{
+            $scope.complete="未完成";
+        }
+
     })
+    $.ajax({
+        url:"http://www.chinadxr.cn:3000/getCompletePic",
+        data:{
+            phone:localStorage.getItem("phonenumber"),
+                id:task[i].id
+        },
+        success:function(data){
+            $("#ataskimg").attr('src','http://www.chinadxr.cn:3000/task[i].imgdata')
+        }
+    });
+
+    $("#failure").on('click',confirmTask(task[i].id));
+}
+//任务完成拍照
+function getPhoto(id){
+   //获取图片后调用compsubmit(id,imgdata)
+document.addEventListener('ondeviceready',onDeviceready,false);
+    function onDeviceready(){
+        navigator.camera.getPicture(onSuccess,onError,{quality : 80,
+            destinationType : destinationType.FILE_URI,//这里要用FILE_URI，才会返回文件的URI地址
+            sourceType : Camera.PictureSourceType.CAMERA,
+            allowEdit : true,
+            encodingType : Camera.EncodingType.JPEG,
+            targetWidth : $("#taskplan_finish").width(),
+            targetHeight : $("#taskplan_finish").height(),
+            saveToPhotoAlbum : true});
+        function onSuccess(imgURI){
+            $("#taskplan_finish").attr('src','imgURI');
+            compsubmit(id,imgURI)
+        }
+    }
 }

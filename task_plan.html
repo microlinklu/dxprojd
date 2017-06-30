@@ -11,72 +11,65 @@
 
 <body>
      <div class="wrap">
-         <div class="seek">
-             <form>
-                  <div class="btn_seek">
-                      <input id="seek" type="text" value="搜索"/>
-                      <input id="btn_seek" type="button" value="搜索" />
-                  </div>
-             </form>
-         </div><!--搜索结束-->
+         <div>
+             <label style="font-size: 0.4rem"> 上传任务完成照片</label>
+         </div>
          <div class="task_title">
-             <p>任务:&nbsp;<span id="title">老人院树木修剪及院内卫生清理</span></p>
+             <p>任务:&nbsp;<label id="title">老人院树木修剪及院内卫生清理</label></p>
          </div>
          <div class="date">
-             <ul>
-                <li><p id="integral">悬赏积分:&nbsp;<span>200分</span></p></li><br /><br />
-                <li><p id="writer">发起人:<span>admin</span></p></li>
-                <li><p id="date">发布时间:<span>2017年5月1日</span></p></li>
-             </ul>
+
+                <p >悬赏积分:&nbsp;<label id="integral">200分</label></p>
+                <p id="writer">发起人:<label id="initor">admin</label></p>
+                <p id="date">发布时间:<label id="createdate">2017年5月1日</label></p>
+
          </div>
          
          <div class="uploading">
              <div class="plan">
-                <p>提交进度:</p>
+                <p>提交任务照片:</p>
              </div>
-             <ul>
-                <div class="img">
-                   <li>上传照片</li>
-                   <li>上传照片</li>
-                   <li>上传照片</li>
-                   <li>上传照片</li>
+
+                <div class="img1"  >
+                    <img src="" alt="完成任务拍照,点击拍照或从相册选取"  onclick="getPhoto()" >
+
                 </div>
-             </ul>
          </div>
          
          <div class="confirm">
-             <input id="button" type="submit" value="确认提交" />
+             <input class="button" type="button" value="确认提交" id="bttpsubmit" />
+             <input class="button" type="button" value="返回列表" onclick="backtaskplan()"/>
          </div>
          
-        <div class="navBox">
-           <ul class="nav">	
-               <li>
-                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
-                     <span>首页</span>
-                   </a>   
-               </li>
-               <li>
-                   <a href="news.html"><img src="images/icon/news1.png"/><br />
-                     <span>新闻</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
-                     <span>任务</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
-                       <span>商城</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
-                     <span>我的</span>
-                   </a>      
-               </li>
-           </ul>
-        </div>
+        <!--<div class="navBox">-->
+           <!--<ul class="nav">	-->
+               <!--<li>-->
+                   <!--<a href="homepage.html"><img src="images/icon/shouye.png"><br />-->
+                     <!--<span>首页</span>-->
+                   <!--</a>   -->
+               <!--</li>-->
+               <!--<li>-->
+                   <!--<a href="news.html"><img src="images/icon/news1.png"/><br />-->
+                     <!--<span>新闻</span>-->
+                   <!--</a>      -->
+               <!--</li>-->
+               <!--<li>-->
+                   <!--<a href="task.html"><img src="images/icon/renwu1.png" /><br />-->
+                     <!--<span>任务</span>-->
+                   <!--</a>      -->
+               <!--</li>-->
+               <!--<li>-->
+                   <!--<a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />-->
+                       <!--<span>商城</span>-->
+                   <!--</a>      -->
+               <!--</li>-->
+               <!--<li>-->
+                   <!--<a href="my.html"><img src="images/icon/wode1.png"/><br />-->
+                     <!--<span>我的</span>-->
+                   <!--</a>      -->
+               <!--</li>-->
+           <!--</ul>-->
+        <!--</div>-->
      </div>
 </body>
 </html>

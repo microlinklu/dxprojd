@@ -788,7 +788,8 @@
 	width:6rem;
 	height:0.6rem;
 	/*background:rgb(187,187,187);*/
-    background-color: #ccc;
+    background-color: #e50b0a;
+    font-size: 0.3rem;
 }
 	
 .set_img
@@ -875,7 +876,7 @@
     height: 0.6rem;
 	line-height:0.6rem;
 	padding-left:0.2rem;
-	float:left;
+
 	font-size:0.24rem;
     color:#000;
 }

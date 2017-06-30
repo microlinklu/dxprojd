@@ -1,47 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 
-.wrap
+.wraptaskplan
 {
     height:auto;
     font-size:0.12rem;
     background-color:#eee;
     width:6rem;
+	height:12rem;
     margin:0 auto;
 }/*公用部分*/
 
-/*搜索框*/
-.seek
-{   
-    width:6rem;
-    height:0.6rem;
-	background-color:#DDD;
-	border-bottom:0.02rem solid #888;
-}
 
-#seek
-{
-	width:4.5rem;
-	height:0.4rem;
-	color:#666;
-	margin:0.1rem 0rem 0.1rem 0.27rem;
-	border:none;
-	padding-left:0.1rem;
-	float:left;
-}
-
-#btn_seek
-{
-	wdith:1.2rem;
-	height:0.4rem;
-	color:#0D0;
-	float:left;
-	margin-top:0.1rem;
-	padding-left:0.3rem;
-	padding-right:0.3rem;
-	border:none;
-	background-color:#09F;
-}/*搜索框按钮结束*/
 
 .task_title
 {
@@ -50,7 +20,7 @@
 	font-size:0.25rem;
 	margin-top:0.05rem;
 	border-top:0.02rem solid #888;
-	border-bottom:0.01rem solid #555;
+
 	line-height:0.65rem;
 	padding-left:0.3rem;
 }
@@ -63,70 +33,42 @@
 .date
 {
 	width:6rem;
-	height:0.9rem;
-	border-bottom:0.01rem solid #777;
+	height:1.5rem;
+	font-size: 0.2rem;
 }
 
-.date ul li
-{
-	font-size:0.2rem;
-	margin-top:0.15rem;
-	float:left;
-}
-
-#integral
-{
-	color:#F60;
-	margin-left:4.4rem;
-}
-
-#writer
-{
-	margin-left:0.15rem;
-}
-
-#date
-{
-	margin-left:0.5rem;
-}
 
 .uploading
 {
 	width:6rem;
-	height:auto;
-	margin-bottom:3rem;
+	height:4rem;
+	margin-top:0.2rem;
 	}
 
 .plan
 {
-	width:1rem;
-	height:0.3rem;
+	width:2rem;
+	height:0.4rem;
 	font-size:0.2rem;
 	margin-top:0.15rem;
 	margin-left:0.2rem;
-	float:left;
+
 	}
 
-.uploading li
+.uploading .img1
 {    
-    width:2rem;
-	height:0.3rem;
+    width:5rem;
+	height:3rem;
 	border:0.01rem solid #000;
-	margin-left:1.4rem;
-	margin-top:0.2rem;
-	font-size:0.24rem;
-	padding-left:0.8rem;
-	padding-top:0.05rem;
-	padding-bottom:0.2rem;
-	line-height:0.5rem;
-	border:0.01rem solid rgb(0,0,0);
+    margin:0.1rem auto;
+
 }
 
   
-#button
+.buttontp
 {
     height:0.6rem;
-    width:5.5rem;
+    width:2.7rem;
 	margin-top:0.2rem;
 	margin-bottom:0.5rem;
 	margin-left:0.25rem;

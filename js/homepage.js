@@ -47,8 +47,11 @@ $(function(){
                 var a=document.createElement("a");
                 var a1=document.createElement("a");
                 a1.setAttribute("href","news_details.html?"+j);
+                var a2=document.createElement("a");
+                a2.setAttribute("href","news_details.html?"+j);
                 var h3=document.createElement("h3");
                 var p=document.createElement("p");
+                a2.appendChild(li1);
                 li1.appendChild(div1);
                 div1.appendChild(div2);
                 div1.appendChild(div3);
@@ -61,7 +64,7 @@ $(function(){
                 h3.innerHTML=data.News[j].title;
                 p.innerHTML=data.News[j].content;
                 a1.innerHTML="详情&gt;";
-                $("#box3 ul").append(li1);
+                $("#box3 ul").append(a2);
             }
 
             for(var s=data.shop.length-1;s>data.shop.length-10;s--){

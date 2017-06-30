@@ -26,14 +26,15 @@
             <p class="writer"><span>作者：<p>{{author}}</p></span></p>
             <p class="news_content">{{content}}</p>
             <div class="num">
-               <p><span>阅读：<p>520</p></span></p>
+               <p>阅读:{{readquantity}}</p>
             </div>
             <div class="dianzan">
-               <p><span><img src="images/icon/dianzan.png" /><p>&nbsp;&nbsp;99</p></span></p>
+               <p><img src="images/icon/dianzan.png" ng-click="dianzan()" />&nbsp;&nbsp;
+                   {{star}}</p>
             </div>
-            <div class="complaint">
-               <p>投诉</p>
-            </div>
+            <!--<div class="complaint">-->
+               <!--<p>投诉</p>-->
+            <!--</div>-->
         </div><!--*/详细新闻内容*-->
         
        <div class="navBox">
@@ -72,15 +73,53 @@
      <script type="text/javascript">
          var url = window.location.href;
          var index=url.charAt(url.length-1);
-         var num=parseInt(index.replace(/\s/g,""))
+         var num=parseInt(index.replace(/\s/g,""));
+         console.log(num);
+      //   阅读数量
+         $(function(){
+             if(JSON.parse(localStorage.getItem("yy")).News[num].read_quantity==0){
+                  JSON.parse(localStorage.getItem("yy")).News[num].read_quantity=1;
+             }else{
+                  JSON.parse(localStorage.getItem("yy")).News[num].read_quantity+1;
+             }
+             $.post("http://www.chinadxr.cn:3000/users/addread",{
+                 read:JSON.parse(localStorage.getItem("yy")).News[num].read_quantity+1,
+                 id:JSON.parse(localStorage.getItem("yy")).News[num].id
+             },function(error,result){
+                 if(error){
+                     console.log(error);
+                 }else{
+                     console.log(result);
+                 }
+             })
 
-
+         })
          var app=angular.module("app",[]);
          app.controller("Info",function($scope){
              $scope.title=JSON.parse(localStorage.getItem("yy")).News[num].title;
              $scope.createtime=JSON.parse(localStorage.getItem("yy")).News[num].createtime;
              $scope.author=JSON.parse(localStorage.getItem("yy")).News[num].author;
              $scope.content=JSON.parse(localStorage.getItem("yy")).News[num].content;
+             $scope.readquantity=JSON.parse(localStorage.getItem("yy")).News[num].read_quantity;
+             $scope.star=JSON.parse(localStorage.getItem("yy")).News[num].star;
+             $scope.dianzan=function(){
+                 $scope.star++;
+                 $.post("http://www.chinadxr.cn:3000/users/newszan",{
+                     star:$scope.star,
+                     id:JSON.parse(localStorage.getItem("yy")).News[num].id,
+                     phone:localStorage.phonenumber
+                 },function(error,result){
+                     if(error){
+                         console.log(error);
+                     }else {
+                         if(result.res){
+                             console.log("新闻点赞修改成功！");
+                         }else{
+                             console.log("新闻点赞修改失败！");
+                         }
+                     }
+                 })
+             }
          })
 
      </script>
