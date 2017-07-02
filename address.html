@@ -44,7 +44,7 @@
           <div class="affirm">
               <a class="user_info"><input type="button" id="affirm" value="确&nbsp;&nbsp;&nbsp;&nbsp;认" /></a>
          </div>
-         <script src="js/jquery-3.0.0.js"></script>
+         <script src="libs/jquery-1.11.0.min.js"></script>
        <script>
 			  gocountry("country");
 			  SelectList("country","1");
@@ -57,7 +57,7 @@
             var city=$('#city').find("option:selected").text();
             var address=$.trim(province)+$.trim(city)+$.trim(des);
             $.ajax({
-               url:"http://localhost:3000/users/up_info",
+               url:"http://www.chinadxr.cn:3000/users/up_info",
                 datatype:'jsonp',
                 data:{
                       phone:localStorage.getItem("phonenumber"),
@@ -79,7 +79,7 @@
 
    window.onload=function(){
        $.ajax({
-               url:"http://localhost:3000/users/user_info",
+               url:"http://www.chinadxr.cn:3000/users/user_info",
                 datatype:'jsonp',
                 data:{
                     phone:localStorage.getItem("phonenumber")
@@ -100,37 +100,37 @@
        })
     }
 
-       </script>    
-    
-     <div class="navBox">
-           <ul class="nav clearfix">
-               <li>
-                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
-                     <span>首页</span>
-                   </a>   
-               </li>
-               <li>
-                   <a href="news.html"><img src="images/icon/news1.png"/><br />
-                     <span>新闻</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
-                     <span>任务</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
-                       <span>商城</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
-                     <span>我的</span>
-                   </a>      
-               </li>
-           </ul>
-        </div>
+       </script>
+
+         <div class="navBox">
+             <ul class="nav">
+                 <li>
+                     <a href="javascript:void(0)" onclick="javascript:window.location.replace('homepage.html')"><img src="images/icon/shouye.png">
+                         <span>首页</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:void(0)" onclick="javascript:window.location.replace('news.html')"><img src="images/icon/news1.png"/>
+                         <span>新闻</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a  href="javascript:void(0)" onclick="javascript:window.location.replace('task.html')"><img src="images/icon/renwu1.png" />
+                         <span>任务</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a  href="javascript:void(0)" onclick="javascript:window.location.replace('shop.html')"><img src="images/icon/gouwuch1.png" />
+                         <span>商城</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:void(0)" onclick="javascript:window.location.replace('my.html')"><img src="images/icon/wode1.png"/>
+                         <span>我的</span>
+                     </a>
+                 </li>
+             </ul>
+         </div>
          
      </div>
 </body>

@@ -18,7 +18,7 @@ myFocus.set({
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap" ng-app="app" ng-controller="news">
     <div class="logo"> 
        <p class="left_Logo"><img src="images/icon/logo.png" class="logo_img"/></p>
        <p class="right_Logo">德孝中国</p>  
@@ -43,62 +43,21 @@ myFocus.set({
     </div>
     <div id="box3">   
         <ul>
-            <li>
+            <li ng-repeat="a in newlists">
                 <div class="title">
                     <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
+                       <img ng-src="{{a.picPath}}"/>
                     </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
+                    <div >
+                       <a href="#" class="title_a"><h3>{{a.title}}</h3></a>
+                       <p>{{a.content}}</p>
                      </div>
                      <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
+                       <a href="news_details.html?{{a.id}}" class="title_a">详情&gt;&gt;</a>
                      </div>
                 </div>
             </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>           
+
         </ul>
     </div>
 
@@ -106,112 +65,105 @@ myFocus.set({
         <ul>
             <li>
                 <a href="news_details.html">
-                     <img src="images/mukewang/css.jpg"/>
+                     <img id="newsimg1" src="images/css.jpg"/>
                 </a>
             </li>
             <li>
                 <a href="news_details.html">
-                     <img src="images/mukewang/css.jpg"/>
+                     <img id="newsimg2" src="images/css.jpg"/>
                 </a>
             </li>
             <li>
                 <a href="news_details.html">
-                     <img src="images/mukewang/css.jpg"/>
+                     <img id="newsimg3" src="images/css.jpg"/>
                 </a>
             </li>
         </ul>
     </div>
  
-    <div id="news_title">   
+    <div id="news_title">
         <ul>
-            <li>
+            <li ng-repeat="a in newlists">
                 <div class="title">
                     <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
+                        <img ng-src="{{a.picPath}}"/>
                     </div>
-                    <div id="title">
-                       <a href="" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
+                    <div >
+                        <a href="#" class="title_a"><h3>{{a.title}}</h3></a>
+                        <p>{{a.content}}</p>
+                    </div>
+                    <div class="information">
+                        <a href="news_details.html?{{a.id}}" class="title_a">详情&gt;&gt;</a>
+                    </div>
                 </div>
             </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>
-                  <li>
-                <div class="title">
-                    <div class="img">
-                       <img src="images/mukewang/css.jpg"/>
-                    </div>
-                    <div id="title">
-                       <a href="#" class="title_a"><h3>标题1</h3></a>
-                       <p>如果你无法简洁的表达你的想法，那只说明你还不了解她。</p>
-                     </div>
-                     <div class="information">
-                       <a href="news_details.html" class="title_a">详情&gt;&gt;</a>
-                     </div>
-                </div>
-            </li>           
+
         </ul>
     </div>
- <div class="navBox">
-           <ul class="nav">	
-               <li>
-                   <a href="homepage.html"><img src="images/icon/shouye.png"><br />
-                     <span>首页</span>
-                   </a>   
-               </li>
-               <li>
-                   <a href="news.html"><img src="images/icon/news1.png"/><br />
-                     <span>新闻</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="task.html"><img src="images/icon/renwu1.png" /><br />
-                     <span>任务</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="shop.html"><img src="images/icon/gouwuch1.png" /><br />
-                       <span>商城</span>
-                   </a>      
-               </li>
-               <li>
-                   <a href="my.html"><img src="images/icon/wode1.png"/><br />
-                     <span>我的</span>
-                   </a>      
-               </li>
-           </ul>
-        </div>
-
+    <!--页面底部导航开始-->
+    <div class="navBox">
+        <ul class="nav">
+            <li>
+                <a href="javascript:void(0)" onclick="javascript:window.location.replace('homepage.html')"><img src="images/icon/shouye.png">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="javascript:window.location.replace('news.html')"><img src="images/icon/news1.png"/>
+                    <span>新闻</span>
+                </a>
+            </li>
+            <li>
+                <a  href="javascript:void(0)" onclick="javascript:window.location.replace('task.html')"><img src="images/icon/renwu1.png" />
+                    <span>任务</span>
+                </a>
+            </li>
+            <li>
+                <a  href="javascript:void(0)" onclick="javascript:window.location.replace('shop.html')"><img src="images/icon/gouwuch1.png" />
+                    <span>商城</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="javascript:window.location.replace('my.html')"><img src="images/icon/wode1.png"/>
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--页面底部导航结束-->
 </div>
+<script src="js/angular.min.js"></script>
+<script>
+    var arr=[];
+    for(var i=0;i<JSON.parse(localStorage.getItem("yy")).News.length-1;i++){
+         arr[i]=JSON.parse(localStorage.getItem("yy")).News[i];
+    }
+    for(var j=0;j<arr.length;j++){
+        arr[j].picPath="http://www.chinadxr.cn:3000"+JSON.parse(localStorage.getItem("yy")).News[j].picPath.substring(8);
+    }
+       var data=localStorage.getItem("yy");
+     for(var i=data.Pic.length-1;i>0;i--){
+                if(data.Pic[i].type==0)
+                {
+
+                    var li=document.createElement("li");
+                    var img=document.createElement("img");
+                    var str="http://www.chinadxr.cn:3000"+data.Pic[i].path.substring(8);
+                    img.setAttribute("src",str);
+                    img.setAttribute("width","600em");
+                    img.setAttribute("height","172em");
+                    li.appendChild(img);
+                    $("#lbBox .pic ul").append(li);
+                }
+            }
+    $("#newsimg1").attr('src',arr[0].picPath);
+    $("#newsimg2").attr('src',arr[1].picPath);
+    $("#newsimg3").attr('src',arr[2].picPath);
+    console.log(arr);
+    var app=angular.module("app",[]);
+    app.controller("news",function($scope){
+        $scope.newlists=arr;
+    })
+</script>
 </body>  
 </html>

@@ -3,14 +3,15 @@
  */
 function searchTask(){
   var task=$("#seek")[0].value;console.log(task)
-    $.ajax("http://localhost:3000/users/searchTask",{
+    $.ajax("http://www.chinadxr.cn:3000/users/searchTask",{
         datatype:'jsonp',
+        cache:false,
         data:{
             title:task
         },
         type:'get',
         success:function(data){
-            console.log(data);
+
         }
     })
 }
@@ -36,7 +37,7 @@ function submitTask(){
           var  longitude=point.lng;
           var  latitude=point.lat;
             $.ajax({
-                url:"http://localhost:3000/users/addTask",
+                url:"http://www.chinadxr.cn:3000/users/addTask",
                 type:"post",
                 data:{
                     title:title,

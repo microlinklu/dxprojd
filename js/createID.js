@@ -14,16 +14,23 @@ function regist(){
     }
     $.ajax({
         type:'post',
-        url:'http://localhost:3000/users/zhuce',
+        url:'http://www.chinadxr.cn:3000/users/zhuce',
         datatype:'jsonp',
-        crossDomain:'true',
+
         data:{
             phone:ph,
             password:pass
         },
 
-        complete:function(xhr,text){
-
+        success:function(data){
+              if(data.res==1){
+                  alert('注册成功');
+                  window.location.replace("Login.html")
+              }else if(data.res==0){
+                  alert('注册失败')
+              }else{
+                  alert('该手机号已经注册过')
+              }
     }
     }
     );

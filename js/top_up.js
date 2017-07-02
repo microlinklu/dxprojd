@@ -133,7 +133,7 @@ function subAcount(channel){
   }
     var   cash=$("#total").val();
 
-    var YOUR_URL = 'http://localhost:3000';
+    var YOUR_URL = 'http://www.chinadxr.cn:3000';
 
 
         if(YOUR_URL.length == 0 || !YOUR_URL.startsWith('http')){
@@ -154,9 +154,7 @@ function subAcount(channel){
             if (xhr.readyState == 4 && xhr.status == 200) {
                 console.log(xhr.responseText);
                 pingpp.createPayment(xhr.responseText, function(result, err) {
-                    console.log(result);
-                    console.log(err.msg);
-                    console.log(err.extra);
+
                 });
             }
         }

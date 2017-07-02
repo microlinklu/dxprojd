@@ -21,6 +21,7 @@ img
 li
 {
 	list-style:none;
+
 }
 
 input,select,textarea
@@ -58,10 +59,11 @@ a
 	width:6rem;
 	height:0.6rem;
 	font-family:"微软雅黑";
-	font-size:0.18rem;
-	margin-top:0.6rem;
+	font-size:10pt;
+	margin-top:0rem;
 	position: fixed;
-	bottom:0;
+	bottom:0rem;
+	left:0rem;
 	padding:0.1rem 0;
 	background-color: #eee;
 }
@@ -73,11 +75,17 @@ a
 	width:0.4rem;
 	height:0.55rem;
 	margin-left:0.68rem;
-	margin-top:0.02rem;
-}
+	margin-top:-0.2rem;
+	margin-bottom: 0rem;
 
+}
+.nav img{
+	width:32px;
+	height:42px;
+	margin-top:0rem;
+}
 .nav li span
 {
-	margin-top:-0.02rem;
+	margin-top:-0.2rem;
 	color:#111;
 }/*底部导航结束*/

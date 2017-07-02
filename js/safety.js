@@ -7,7 +7,7 @@ function safeSetup(){
     var email=$("#email").val()
     var phone=localStorage.getItem("phonenumber")
     $.ajax({
-        url:"http://localhost:3000/users/safesetup",
+        url:"http://www.chinadxr.cn:3000/users/safesetup",
         type:'post',
         datatype:'jsonp',
         data:{
@@ -18,7 +18,7 @@ function safeSetup(){
         },
 
         success:function(){
-            console.log('2344')
+         window.location.replace('my.html')
         }
     })
 }

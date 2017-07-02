@@ -10,19 +10,22 @@ function taskList(type){
         $("#type").text('关注过');
         $("#mask").css('display','block');
     }else if(type=='accept'){
+        $("#mask2").css('display','none');
         $("#mask1").css('display','block');
-        $("#bt1").css('background','#FC6')
-        $("#bt2").css('background','#DDD')
+        $(".bt1").css('background','#FC6')
+        $(".bt2").css('background','#DDD')
+
 
     }else if(type=='publish'){
-
-        $("#bt2").css('background','#FC6')
-        $("#bt1").css('background','#DDD')
+        $("#mask1").css('display','none');
+        $("#mask2").css('display','block');
+        $(".bt2").css('background','#FC6')
+        $(".bt1").css('background','#DDD')
     }
 
 
     $.ajax({
-        url:"http://localhost:3000/users/hottask",
+        url:"http://www.chinadxr.cn:3000/users/hottask",
         datatype:'jsonp',
         type:'get',
         cache:false,
@@ -31,8 +34,8 @@ function taskList(type){
             type:type
         },
         success:function(data){
-           var ol=document.getElementById("acctaskol");
-            console.log(data);
+           var ol=document.getElementsByClassName("acctaskol")[0];
+
             for(var i=0;i<data.length;i++){
                 var li=document.createElement('li');
                 if(type=='accept'){
@@ -69,7 +72,7 @@ function taskList(type){
 }
 window.onload=function(){
     $.ajax({
-        url:"http://localhost:3000/users/getMyInfo",
+        url:"http://www.chinadxr.cn:3000/users/getMyInfo",
         datatype:'jsonp',
         data:{
             phone:localStorage.getItem("phonenumber")
@@ -86,6 +89,9 @@ function hide(){
 }
 function hide1(){
     $("#mask1").css("display","none");
+}
+function hide2(){
+    $("#mask2").css("display","none");
 }
 function backtaskplan(){
     $("#task_plan").css("display","none");
@@ -107,7 +113,7 @@ function taskDetail(i,task){
 function compsubmit(id,imgdata){
 var filename=imgdata.substring(imgdata.lastIndexOf('/')+1);
     $.ajax({
-        url:"http://localhost:3000/users/completeTask",
+        url:"http://www.chinadxr.cn:3000/users/completeTask",
         data:{
             id:id,
             picname:filename,
@@ -137,7 +143,7 @@ var filename=imgdata.substring(imgdata.lastIndexOf('/')+1);
 //任务完成确认 iscomplete=2上传用户phone，
 function confirmTask(id){
     $.ajax({
-        url:"http://localhost:3000/users/confirmTask",
+        url:"http://www.chinadxr.cn:3000/users/confirmTask",
         datatype:'jsonp',
         type:'post',
         data:{

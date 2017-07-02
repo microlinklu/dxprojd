@@ -7,11 +7,11 @@ $(function(){
         cache:false,
         beforeSend:function(){},
         success:function(msg){
-            console.log(msg);
+
             if(typeof(Storage)!=="undefined"){
                 localStorage.setItem("yy",JSON.stringify(msg));
                 var data=JSON.parse(localStorage.getItem("yy"));
-                console.log(data);
+
 
             }
             else{
@@ -20,7 +20,7 @@ $(function(){
             for(var i=data.Pic.length-1;i>0;i--){
                 if(data.Pic[i].type==0)
                 {
-                    console.log(data.Pic[i].path);
+
                     var li=document.createElement("li");
                     var img=document.createElement("img");
                     var str="http://www.chinadxr.cn:3000"+data.Pic[i].path.substring(8);
@@ -106,7 +106,7 @@ $(function(){
             )
         },
         error:function(msg){
-            console.log(msg);
+
         }
 
     })

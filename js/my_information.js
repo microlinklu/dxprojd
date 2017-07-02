@@ -9,7 +9,7 @@ function submitInfo(){
     var degree=$("#2").val();
     var nickname=$("#3").val();
     $.ajax({
-        url:"http://localhost:3000/users/changMyInfo",
+        url:"http://www.chinadxr.cn:3000/users/changMyInfo",
         type:'post',
         datatype:'jsonp',
         data:{
@@ -24,7 +24,7 @@ function submitInfo(){
 }
 function getMyInfo(){
     $.ajax({
-        url:"http://localhost:3000/users/getMyInfo",
+        url:"http://www.chinadxr.cn:3000/users/getMyInfo",
         type:'get',
         datatype:'jsonp',
         data:{

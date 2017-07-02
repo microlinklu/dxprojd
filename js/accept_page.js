@@ -5,7 +5,7 @@ var task;
 function taskList(){
 
     $.ajax({
-        url:"http://localhost:3000/users/getTask",
+        url:"http://www.chinadxr.cn:3000/users/getTask",
         success:function(data) {
             task=data.data;
         },
@@ -80,7 +80,7 @@ function addTable(parent,obj,index){
     var td23=document.createElement('td');
     var bt1=document.createElement('button');
     bt1.setAttribute('width','0.5rem');
-    bt1.textContent='接受任务';
+    bt1.textContent='查看任务';
     bt1.setAttribute('onclick','taskContent('+index+')');
     var bt2=document.createElement('button');
     bt2.textContent='忽略任务';
@@ -93,19 +93,23 @@ function addTable(parent,obj,index){
     table.appendChild(tr2);
     parent.appendChild(table);
 }
-function taskContent(index) {
+function taskContent(i) {
     $("#taskmask").css('display', 'block');
-     $("#title").text(task[index].title);
-    $("#creatId").text(task[index].initiator);
-    $("#createtime").text(task[index].createtime);
-    $("#content").text(task[index].content);
-    $("#points").text(task[index].points);
-    $("#address").text(task[index].address);
-    $("#btaccept").onclick=acceptTask(index);
-    $("#btcare").onclick=careTask(index);
-    $("#btgood").onclick=goodTask(index);
+     $("#title").text(task[i].title);
+    $("#creatId").text(task[i].initiator);
+    $("#createtime").text(task[i].createtime);
+    $("#content").text(task[i].content);
+    $("#points").text(task[i].points);
+    $("#address").text(task[i].address);
+    //$("#btaccept").attr('onclick','acceptTask(index)');
+    //$("#btcare").attr('onclick','careTask(index)');
+    //$("#btgood").attr('onclick','goodTask(index)');
+    document.getElementById('btaccept').onclick=new Function("acceptTask("+task[i].id+")");
+    document.getElementById('btcare').onclick=new Function("careTask("+task[i].id+")");
+    document.getElementById('btgood').onclick=new Function("goodTask("+task[i].id+")");
+
     var map = new BMap.Map("allmap");
-    var new_point = new BMap.Point(task[index].longitude, task[index].latitude);
+    var new_point = new BMap.Point(task[i].longitude, task[i].latitude);
     map.centerAndZoom(new_point, 11);
     map.enableScrollWheelZoom(true);
     var marker = new BMap.Marker(new_point);  // 创建标注
@@ -120,15 +124,15 @@ function back(){
 function acceptTask(id){
     var phone=localStorage.getItem('phonenumber').trim();
     $.ajax({
-        url:"http://localhost:3000/users/acceptTask",
+        url:"http://www.chinadxr.cn:3000/users/acceptTask",
         datatype:'jsonp',
         data:{
             phone:phone,
             id:id
         },
         type:'post',
-        crossDomain:'true',
-        success:function(data){console.log(data);
+
+        success:function(data){
             if(data.res==1){
                 alert('任务接受成功')
             }else{
@@ -140,7 +144,7 @@ function acceptTask(id){
 function abortTask(id){
     var phone=localStorage.getItem('phonenumber').trim();
     $.ajax({
-        url:"http://localhost:3000/users/acceptTask",
+        url:"http://www.chinadxr.cn:3000/users/acceptTask",
         datatype:'jsonp',
         data:{
             phone:phone,
@@ -149,7 +153,7 @@ function abortTask(id){
         },
         type:'post',
         crossDomain:'true',
-        success:function(data){console.log(data);
+        success:function(data){
             if(data.res==1){
                 alert('任务忽略成功')
             }else{
@@ -160,29 +164,43 @@ function abortTask(id){
 }
 function careTask(id){
     $.ajax({
-        url:"http://localhost:3000/users/care",
+        url:"http://www.chinadxr.cn:3000/users/care",
         data:{
             id:id,
-            phone:pohne
+            phone:localStorage.getItem('phonenumber')
         },
         datatype:'jsonp',
         type:'post',
-        success:function(){
+        success:function(data){console.log(data.res)
+            if(data.res==1){
+            alert("收藏成功");
+            window.location.href="accept_page.html"}else{
+                alert("已经收藏过了")
+            }
 
+        },
+        error:function(){
+            console.log("shibai");
         }
     })
 }
-function goodTask(id){
+function goodTask(id){console.log(23)
     $.ajax({
-        url:"http://localhost:3000/users/good",
+        url:"http://www.chinadxr.cn:3000/users/good",
         data:{
             id:id,
-            phone:pohne
+            phone:localStorage.getItem('phonenumber')
         },
         datatype:'jsonp',
         type:'post',
-        success:function(){
-
+        success:function(data){
+            console.log(data)
+            if(data.res==1) {
+                alert("点赞成功");
+                window.location.replace("accept_page.html")
+            }else{
+                alert("已经赞过了");
+            }
         }
     })
 }

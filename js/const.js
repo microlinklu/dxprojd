@@ -6,7 +6,7 @@ var task=[];
 var shop=[];
 $(function(){
     $.ajax({
-        url:'http://localhost:3000/users/getIndex',
+        url:'http://www.chinadxr.cn:3000/users/getIndex',
         type:'get',
         dataType:'jsonp',
         beforeSend:function(){},
